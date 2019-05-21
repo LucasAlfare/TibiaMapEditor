@@ -93,7 +93,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
                 g.setColor(Color.LIGHT_GRAY);
                 if (tiles[i/32][j/32] != -1){
                     g.drawImage(
-                            ImageIO.read(new File("src/com/sprites/10304.gif")),
+                            ImageIO.read(new File("src/assets/sprites/10304.gif")),
                             i,
                             j,
                             this
@@ -109,7 +109,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
 
     private void mouseCursor(Graphics2D g) throws IOException {
         g.drawImage(
-                imgW_ModedAlpha(ImageIO.read(new File("src/com/sprites/10304.gif")), 180),
+                imgW_ModedAlpha(ImageIO.read(new File("src/assets/sprites/10304.gif")), 180),
                 (currX / 32) * 32,
                 (currY / 32) * 32,
                 this);

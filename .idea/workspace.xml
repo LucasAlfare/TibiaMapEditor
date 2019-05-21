@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/tibia-8.6.spr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/extractor/TibiaSpritesExtractor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor de Mapa/com/Gui$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor de Mapa/com/Gui.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor de Mapa/com/JRelativeLayout$ComponenteComando.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor de Mapa/com/JRelativeLayout$Parametros.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor de Mapa/com/JRelativeLayout$Valores.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor de Mapa/com/JRelativeLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor de Mapa/com/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sprites/10304.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sprites/10304.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sprites/253.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sprites/253.gif" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,47 +45,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/extractor/TibiaSpritesExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="248">
+              <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
               <folding>
-                <element signature="e#78#79#0" expanded="true" />
-                <element signature="e#120#121#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/JMapEditorCanvas.java">
+        <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="380">
+              <caret line="95" column="61" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#JMapEditorCanvas#0;class#JMapEditorCanvas#0" />
                 <element signature="e#1752#2226#0" expanded="true" />
                 <element signature="e#2225#2226#0" expanded="true" />
                 <element signature="method#paintComponent#0;class#MyCanvas#0" />
-                <element signature="method#atualizar#0;class#MyCanvas#0" />
-                <element signature="method#mouseCursor#0;class#MyCanvas#0" />
                 <element signature="method#imgW_ModedAlpha#0;class#MyCanvas#0" />
                 <element signature="e#4415#4416#0" expanded="true" />
                 <element signature="e#4469#4470#0" expanded="true" />
                 <element signature="e#4539#4540#0" expanded="true" />
                 <element signature="e#4598#4599#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Gui.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,7 +96,6 @@
         <option value="$PROJECT_DIR$/src/com/JRelativeLayout.java" />
         <option value="$PROJECT_DIR$/src/com/GuiT.java" />
         <option value="$PROJECT_DIR$/src/com/gaga/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/Main.java" />
         <option value="$PROJECT_DIR$/src/com/gaga/GuiT.java" />
         <option value="$PROJECT_DIR$/src/com/gaga/JavaApplication57.java" />
         <option value="$PROJECT_DIR$/src/com/gaga/C.java" />
@@ -104,6 +103,11 @@
         <option value="$PROJECT_DIR$/src/com/MapEditorCanvas.java" />
         <option value="$PROJECT_DIR$/src/com/Gui.java" />
         <option value="$PROJECT_DIR$/src/com/JMapEditorCanvas.java" />
+        <option value="$PROJECT_DIR$/src/com/gui/Gui.java" />
+        <option value="$PROJECT_DIR$/src/com/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/extractor/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/extractor/TibiaSpritesExtractor.java" />
+        <option value="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" />
       </list>
     </option>
   </component>
@@ -138,13 +142,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Editor de Mapa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Editor de Mapa" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sprites" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -156,6 +153,11 @@
               <item name="Editor de Mapa" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
+            <path>
+              <item name="Editor de Mapa" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -166,7 +168,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/gaga" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/extractor" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -176,7 +178,11 @@
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/extractor" />
       <recent name="$PROJECT_DIR$/src/com/gaga" />
       <recent name="$PROJECT_DIR$/src/com/sprites" />
       <recent name="$PROJECT_DIR$/src/com" />
@@ -194,33 +200,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="JavaApplication57" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.gaga.JavaApplication57" />
-      <module name="Editor de Mapa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gaga.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.gaga.Main" />
-      <module name="Editor de Mapa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gaga.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Main" />
       <module name="Editor de Mapa" />
@@ -237,8 +217,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.JavaApplication57" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +234,7 @@
       <workItem from="1558375802143" duration="796000" />
       <workItem from="1558380553157" duration="2032000" />
       <workItem from="1558402407526" duration="10026000" />
-      <workItem from="1558445818603" duration="8555000" />
+      <workItem from="1558445818603" duration="15926000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial">
       <created>1558454034910</created>
@@ -272,17 +250,23 @@
       <option name="project" value="LOCAL" />
       <updated>1558454310509</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Inicial">
+      <created>1558454501763</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558454501763</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25638000" />
+    <option name="totallyTimeSpent" value="33009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1446" height="870" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23457676" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23457676" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -301,7 +285,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.328877" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32797858" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -350,13 +334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1085" column="23" selection-start-line="1085" selection-start-column="23" selection-end-line="1085" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/javax/imageio/ImageIO.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="490" column="24" selection-start-line="490" selection-start-column="24" selection-end-line="490" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -420,17 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/JRelativeLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="170" column="42" lean-forward="true" selection-start-line="170" selection-start-column="42" selection-end-line="170" selection-end-column="42" />
-          <folding>
-            <element signature="e#6196#6197#0" expanded="true" />
-            <element signature="e#6234#6235#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gaga/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -465,38 +431,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Gui.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gui/Gui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        <state relative-caret-position="48">
+          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2337#2338#0" expanded="true" />
+            <element signature="e#2390#2391#0" expanded="true" />
+            <element signature="e#2461#2462#0" expanded="true" />
+            <element signature="e#2510#2511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gui/JRelativeLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="85" column="52" lean-forward="true" selection-start-line="85" selection-start-column="52" selection-end-line="85" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/javax/imageio/ImageIO.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/nio/ByteBuffer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/nio/file/Files.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-559">
+          <caret line="682" column="25" selection-start-line="682" selection-start-column="25" selection-end-line="682" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/nio/HeapByteBuffer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+          <folding>
+            <element signature="e#5716#5717#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/nio/BufferUnderflowException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/nio/Buffer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="138" column="32" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/extractor/TibiaSpritesExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="380">
+          <caret line="95" column="61" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
           <folding>
-            <element signature="e#78#79#0" expanded="true" />
-            <element signature="e#120#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/JMapEditorCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#JMapEditorCanvas#0;class#JMapEditorCanvas#0" />
             <element signature="e#1752#2226#0" expanded="true" />
             <element signature="e#2225#2226#0" expanded="true" />
             <element signature="method#paintComponent#0;class#MyCanvas#0" />
-            <element signature="method#atualizar#0;class#MyCanvas#0" />
-            <element signature="method#mouseCursor#0;class#MyCanvas#0" />
             <element signature="method#imgW_ModedAlpha#0;class#MyCanvas#0" />
             <element signature="e#4415#4416#0" expanded="true" />
             <element signature="e#4469#4470#0" expanded="true" />

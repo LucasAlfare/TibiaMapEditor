@@ -1,8 +1,5 @@
 package com.gui;
 
-import com.gui.JMapEditorCanvas;
-import com.gui.JRelativeLayout;
-
 import javax.swing.*;
 import java.awt.*;
 
