@@ -90,7 +90,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
     private void atualizar(Graphics2D g) throws IOException {
         for (int i = 0; i < tiles.length * 32; i += 32) {
             for (int j = 0; j < tiles[i/32].length * 32; j += 32) {
-                g.setColor(Color.DARK_GRAY);
+                g.setColor(Color.LIGHT_GRAY);
                 if (tiles[i/32][j/32] != -1){
                     g.drawImage(
                             ImageIO.read(new File("src/com/sprites/10304.gif")),
