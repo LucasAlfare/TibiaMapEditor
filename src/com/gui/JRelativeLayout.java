@@ -1,4 +1,4 @@
-package com;
+package com.gui;
 
 import java.awt.*;
 import java.util.ArrayList;

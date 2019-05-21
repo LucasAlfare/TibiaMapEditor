@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="Inicial">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Editor de Mapa.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/Gui$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/Gui.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/GuiT.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/JRelativeLayout$ComponenteComando.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/JRelativeLayout$Parametros.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/JRelativeLayout$Valores.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/JRelativeLayout.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/MyCanvas$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/MyCanvas$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/MyCanvas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/gaga/C.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/gaga/GuiT.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/gaga/JavaApplication57$CustomScroll.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/gaga/JavaApplication57$TestPane.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/gaga/JavaApplication57.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/gaga/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/sprites/10304.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Editor de Mapa/com/sprites/253.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Gui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/JMapEditorCanvas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/JRelativeLayout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sprites/10304.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sprites/253.gif" afterDir="false" />
+    <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,9 +33,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+            <state relative-caret-position="38">
+              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding>
+                <element signature="e#78#79#0" expanded="true" />
                 <element signature="e#120#121#0" expanded="true" />
               </folding>
             </state>
@@ -75,14 +46,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/JMapEditorCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="151" column="48" lean-forward="true" selection-start-line="151" selection-start-column="48" selection-end-line="151" selection-end-column="48" />
+            <state relative-caret-position="95">
+              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#JMapEditorCanvas#0;class#JMapEditorCanvas#0" />
                 <element signature="e#1752#2226#0" expanded="true" />
                 <element signature="e#2225#2226#0" expanded="true" />
-                <element signature="e#2290#2291#0" expanded="true" />
-                <element signature="e#2337#2338#0" expanded="true" />
+                <element signature="method#paintComponent#0;class#MyCanvas#0" />
+                <element signature="method#atualizar#0;class#MyCanvas#0" />
+                <element signature="method#mouseCursor#0;class#MyCanvas#0" />
+                <element signature="method#imgW_ModedAlpha#0;class#MyCanvas#0" />
+                <element signature="e#4415#4416#0" expanded="true" />
+                <element signature="e#4469#4470#0" expanded="true" />
+                <element signature="e#4539#4540#0" expanded="true" />
+                <element signature="e#4598#4599#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Gui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="53" column="31" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="31" />
+            <state relative-caret-position="126">
+              <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,9 +100,9 @@
         <option value="$PROJECT_DIR$/src/com/gaga/GuiT.java" />
         <option value="$PROJECT_DIR$/src/com/gaga/JavaApplication57.java" />
         <option value="$PROJECT_DIR$/src/com/gaga/C.java" />
-        <option value="$PROJECT_DIR$/src/com/Gui.java" />
         <option value="$PROJECT_DIR$/src/com/MyCanvas.java" />
         <option value="$PROJECT_DIR$/src/com/MapEditorCanvas.java" />
+        <option value="$PROJECT_DIR$/src/com/Gui.java" />
         <option value="$PROJECT_DIR$/src/com/JMapEditorCanvas.java" />
       </list>
     </option>
@@ -249,7 +226,7 @@
       <module name="Editor de Mapa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.*" />
+          <option name="PATTERN" value="com.gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -279,18 +256,33 @@
       <workItem from="1558375802143" duration="796000" />
       <workItem from="1558380553157" duration="2032000" />
       <workItem from="1558402407526" duration="10026000" />
-      <workItem from="1558445818603" duration="8018000" />
+      <workItem from="1558445818603" duration="8555000" />
     </task>
+    <task id="LOCAL-00001" summary="Inicial">
+      <created>1558454034910</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558454034911</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Inicial">
+      <created>1558454310509</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558454310509</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25101000" />
+    <option name="totallyTimeSpent" value="25638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1446" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26398852" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23457676" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -299,7 +291,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.328877" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32797858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -323,6 +315,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Inicial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inicial" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/javax/swing/JComboBox.class">
@@ -459,16 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Gui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="53" column="31" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GuiT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -479,11 +465,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Gui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        <state relative-caret-position="38">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding>
+            <element signature="e#78#79#0" expanded="true" />
             <element signature="e#120#121#0" expanded="true" />
           </folding>
         </state>
@@ -491,14 +488,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/JMapEditorCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="151" column="48" lean-forward="true" selection-start-line="151" selection-start-column="48" selection-end-line="151" selection-end-column="48" />
+        <state relative-caret-position="95">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#JMapEditorCanvas#0;class#JMapEditorCanvas#0" />
             <element signature="e#1752#2226#0" expanded="true" />
             <element signature="e#2225#2226#0" expanded="true" />
-            <element signature="e#2290#2291#0" expanded="true" />
-            <element signature="e#2337#2338#0" expanded="true" />
+            <element signature="method#paintComponent#0;class#MyCanvas#0" />
+            <element signature="method#atualizar#0;class#MyCanvas#0" />
+            <element signature="method#mouseCursor#0;class#MyCanvas#0" />
+            <element signature="method#imgW_ModedAlpha#0;class#MyCanvas#0" />
+            <element signature="e#4415#4416#0" expanded="true" />
+            <element signature="e#4469#4470#0" expanded="true" />
+            <element signature="e#4539#4540#0" expanded="true" />
+            <element signature="e#4598#4599#0" expanded="true" />
           </folding>
         </state>
       </provider>
