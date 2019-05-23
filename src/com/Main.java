@@ -5,6 +5,6 @@ import com.gui.Gui;
 public class Main {
 
     public static void main(String[] args) {
-        //new Gui().setVisible(true);
+        new Gui().setVisible(true);
     }
 }

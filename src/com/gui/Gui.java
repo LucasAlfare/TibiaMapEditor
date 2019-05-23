@@ -35,11 +35,11 @@ public class Gui extends JFrame {
         setupCategories(new String[]{"GROUND", "TOWN", "NATURE", "INTERIOR"}, categories);
 
         itemsScrollPane = new JScrollPane();
-        items = new JList<>();
         itemsScrollPane.setName("itemsPane");
+        items = new JList<>();
         setupItems(new String[]{"A", "B", "C", "D", "E", "F"}, items);
 
-        canvas = new JMapEditorCanvas(50, 50);
+        canvas = new JMapEditorCanvas(10, 10);
         canvas.setName("canvas");
         canvasScrollPane = new JScrollPane(canvas);
         canvasScrollPane.setName("canvasScrollPane");
