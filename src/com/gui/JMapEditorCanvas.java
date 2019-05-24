@@ -42,7 +42,11 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
 
         currentBounds = new ArrayList<>();
         s = null;
+        System.out.println("Starting loading Spr parser...");
+        long start = System.currentTimeMillis();
         sprParser = new SprParser();
+        System.out.println((System.currentTimeMillis() - start) + " milliseconds to load SprParser.");
+
         currentImg = sprParser.imagemSprite(currentSelectedID);
         lastID = currentSelectedID;
 
@@ -142,6 +146,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
                 }
 
                 g.setColor(Color.LIGHT_GRAY);
+                g.fillRect(i, j, T_SIZE, T_SIZE);
                 if (tiles[ix][jy] != -1){
                     //desenha o ID selecionado
                     g.drawImage(
@@ -150,8 +155,6 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
                             j,
                             this
                     );
-                } else {
-                    g.fillRect(i, j, T_SIZE, T_SIZE);
                 }
                 g.setColor(Color.BLACK);
                 g.drawRect(i, j, T_SIZE, T_SIZE);
@@ -173,7 +176,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
 
     private void mouseCursor(Graphics2D g) throws IOException {
         g.drawImage(
-                imgW_ModedAlpha(ImageIO.read(new File("src/assets/sprites/10304.gif")), 180),
+                currentImg,
                 (currX / T_SIZE) * T_SIZE,
                 (currY / T_SIZE) * T_SIZE,
                 this);

@@ -44,7 +44,7 @@ public class Gui extends JFrame {
         items = new JList<>();
         setupItems(new String[]{"A", "B", "C", "D", "E", "F"}, items);
 
-        canvas = new JMapEditorCanvas(15, 15);
+        canvas = new JMapEditorCanvas(100, 100);
         canvas.setName("canvas");
         canvas.setFocusable(true);
         canvasScrollPane = new JScrollPane(canvas);
