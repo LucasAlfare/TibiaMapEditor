@@ -1,5 +1,7 @@
 package com.extractor;
 
+import com.gui.JMapEditorCanvas;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -141,7 +143,11 @@ public class SprParser {
 
         SprParser sprParser = new SprParser();
         ArrayList<Pixel> spriteInfo = sprParser.getSpriteInfo(sprParser.spriteAddresses.get(endereco));
-        BufferedImage img = config.createCompatibleImage(32, 32, Transparency.TRANSLUCENT);
+        BufferedImage img = config.createCompatibleImage(
+                JMapEditorCanvas.T_SIZE,
+                JMapEditorCanvas.T_SIZE,
+                Transparency.TRANSLUCENT
+        );
         for (Pixel p : spriteInfo) img.setRGB(p.x, p.y, p.color.getRGB());
         return img;
     }

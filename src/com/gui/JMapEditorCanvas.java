@@ -16,7 +16,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
 
     private int w, h;
     private int[][] tiles;
-    private static final int T_SIZE = 32;
+    public static final int T_SIZE = 32;
 
     private int currX, currY;
     private int currentSelectedID = 1, lastID; //TODO: permitir usuário alterar esse valor
@@ -174,31 +174,12 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
         return p;
     }
 
-    private void mouseCursor(Graphics2D g) throws IOException {
+    private void mouseCursor(Graphics2D g) {
         g.drawImage(
                 currentImg,
                 (currX / T_SIZE) * T_SIZE,
                 (currY / T_SIZE) * T_SIZE,
                 this);
-    }
-
-    private static BufferedImage imgW_ModedAlpha(BufferedImage modMe, double modAmount) {
-        for (int x = 0; x < modMe.getWidth(); x++) {
-            for (int y = 0; y < modMe.getHeight(); y++) {
-                //
-                int argb = modMe.getRGB(x, y); //always returns TYPE_INT_ARGB
-                int alpha = (argb >> 24) & 0xff;  //isolate alpha
-
-                alpha *= modAmount; //similar distortion to tape saturation (has scrunching effect, eliminates clipping)
-                alpha &= 0xff;      //keeps alpha in 0-255 range
-
-                argb &= 0x00ffffff; //remove old alpha info
-                argb |= (alpha << 24);  //add new alpha info
-                modMe.setRGB(x, y, argb);
-            }
-        }
-
-        return modMe;
     }
 
     @Override
