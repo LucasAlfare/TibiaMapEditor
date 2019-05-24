@@ -88,21 +88,18 @@ public class Parser {
             enderecoAtual += 2;
 
             atual += numPixelsTransparentes;
-            System.out.println(atual);
 
             for (int i = 0; i < numPixelsColoridos; i++) {
                 Pixel pixel = new Pixel(
                         (int) (atual % tamanho),
                         (int) (atual / tamanho),
                         //TODO: isso aqui precisa ser corrigido...
-                        new Color(
+                        new Color(getIntFromColor(
                                 getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
                                 getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
-                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
-                                255
-                        )
+                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]})
+                        ))
                 );
-
                 //                        new int[]{
 //                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
 //                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
@@ -116,6 +113,22 @@ public class Parser {
         }
 
         return spriteInfo;
+    }
+
+    /**
+     * Fonte: https://stackoverflow.com/a/18037185
+     *
+     * @param Red
+     * @param Green
+     * @param Blue
+     * @return
+     */
+    public int getIntFromColor(int Red, int Green, int Blue){
+        Red = (Red << 16) & 0x00FF0000; //Shift red 16-bits and mask out other stuff
+        Green = (Green << 8) & 0x0000FF00; //Shift Green 8-bits and mask out other stuff
+        Blue = Blue & 0x000000FF; //Mask out anything not blue.
+
+        return 0xFF000000 | Red | Green | Blue; //0xFF000000 for 100% Alpha. Bitwise OR everything together.
     }
 
     public byte getUint8(byte[] buffer) {
