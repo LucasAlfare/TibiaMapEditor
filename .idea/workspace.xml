@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/extractor/DatParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/DatParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/extractor/SprParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/SprParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/Gui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tt/M2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tt/M2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="148" column="39" lean-forward="true" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
+            <state relative-caret-position="304">
+              <caret line="133" column="50" selection-start-line="133" selection-start-column="50" selection-end-line="133" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3671#3672#0" expanded="true" />
@@ -63,10 +58,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gui/Gui.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,9 +132,9 @@
         <option value="$PROJECT_DIR$/src/com/extractor/SpriteParser.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/DatParser.java" />
         <option value="$PROJECT_DIR$/src/com/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/gui/Gui.java" />
         <option value="$PROJECT_DIR$/src/tt/M2.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/SprParser.java" />
+        <option value="$PROJECT_DIR$/src/com/gui/Gui.java" />
         <option value="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" />
       </list>
     </option>
@@ -362,7 +369,7 @@
       <workItem from="1558648793554" duration="267000" />
       <workItem from="1558657271050" duration="6902000" />
       <workItem from="1558664944739" duration="7384000" />
-      <workItem from="1558705416215" duration="6854000" />
+      <workItem from="1558705416215" duration="8150000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial">
       <created>1558454034910</created>
@@ -455,11 +462,32 @@
       <option name="project" value="LOCAL" />
       <updated>1558707172644</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="implementação básica do SprParser dentro do JMapEditorCanvas">
+      <created>1558714577261</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1558714577261</updated>
+    </task>
+    <task id="LOCAL-00015" summary="implementação básica do SprParser dentro do JMapEditorCanvas">
+      <created>1558714749750</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1558714749750</updated>
+    </task>
+    <task id="LOCAL-00016" summary="implementação básica do SprParser dentro do JMapEditorCanvas">
+      <created>1558715530847</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1558715530847</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85828000" />
+    <option name="totallyTimeSpent" value="87124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1446" height="870" extended-state="6" />
@@ -474,7 +502,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32931727" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30655956" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30655956" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -506,7 +534,8 @@
     <MESSAGE value="TODO: arrumar a cor, ta dando um errinho..." />
     <MESSAGE value="EXTRATOR FUNCIONA." />
     <MESSAGE value="algumas organicoes e inicio do DatParser" />
-    <option name="LAST_COMMIT_MESSAGE" value="algumas organicoes e inicio do DatParser" />
+    <MESSAGE value="implementação básica do SprParser dentro do JMapEditorCanvas" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementação básica do SprParser dentro do JMapEditorCanvas" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
@@ -803,7 +832,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -842,8 +871,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gui/Gui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="55" column="40" lean-forward="true" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+        <state relative-caret-position="247">
+          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -852,8 +881,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="148" column="39" lean-forward="true" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
+        <state relative-caret-position="304">
+          <caret line="133" column="50" selection-start-line="133" selection-start-column="50" selection-end-line="133" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3671#3672#0" expanded="true" />

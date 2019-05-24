@@ -2,13 +2,12 @@ package com.gui;
 
 import com.extractor.SprParser;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.geom.Path2D;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -131,6 +130,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
     }
 
     private void atualizar(Graphics2D g) throws IOException {
+        //TODO: mover isso para o metodo q ira alterar o ID
         if (currentSelectedID != lastID){
             currentImg = sprParser.imagemSprite(currentSelectedID);
         }
