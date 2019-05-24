@@ -2,7 +2,6 @@ package com.extractor;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferInt;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -10,6 +9,16 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+/**
+ * Eu fiz essa classe em java baseado em ensinamentos
+ * encontrados pela net e em um arquivo em JavaScript
+ * que encontrei nesse link:
+ * https://github.com/nawarian/TibiaSprParser/blob/master/Tibia.Spr.Parser.js
+ * <p>
+ * Para funcionar precisei adaptar varias coisas, sobretudo a forma de
+ * leitura dos "bytes unsigned", pois tava muito complicado...
+ */
+@SuppressWarnings("WeakerAccess")
 public class Parser {
 
     private byte[] bytesDoArquivo;
@@ -18,94 +27,93 @@ public class Parser {
     private ArrayList<Long> spriteAddresses;
     private ArrayList<Pixel> spriteInfo;
 
+    /**
+     * Cria um parser e, de cara, carrega todos os campos...
+     *
+     * @throws IOException se nao encontrar um arquivo chamado
+     *                     "tibia-8.6.spr" (vou alterar isso dps)
+     */
     public Parser() throws IOException {
         bytesDoArquivo = Files.readAllBytes(Paths.get("src/assets/tibia-8.6.spr"));
         spriteAddresses = new ArrayList<>();
         spriteInfo = new ArrayList<>();
 
+        /*
+         * carrega tudo na instancia do objeto..
+         */
         getNumSprites();
-        getSpritesAddresses();
-        //getSpriteInfo(spriteAddresses.get(1)); // para testes..
+        getEnderecosSprites();
     }
 
+    /**
+     * Serve pra pegar o numero total de desenhos no arquivo.
+     * <p>
+     * Esse numero e encontrado exatamente no buffer do segundo
+     * "offset" dos bytes do arquivo .spr
+     *
+     * @return um numero...
+     */
     public int getNumSprites() {
         if (numSprites == 0) {
-            numSprites = getUint16(
-                    new byte[]{
-                            bytesDoArquivo[4],
-                            bytesDoArquivo[5]
-                    });
+            numSprites = lerShort(4);
         }
 
         return numSprites;
     }
 
-    public ArrayList<Long> getSpritesAddresses() {
+    /**
+     * Esse metodo serve pra mapear os offsets de todas as sprites
+     * contidas no arquivo .spr. Assim, sempre que for necessario
+     * buscar por uma sprite nao sera necessario percorrer o arquivo
+     * completo, bastando apenas buscar a referencia para tal nesta
+     * lista.
+     *
+     * @return uma lista de longs onde cada um e um long q representa
+     * offset de uma sprite...
+     */
+    public ArrayList<Long> getEnderecosSprites() {
         if (spriteAddresses.isEmpty()) {
             for (int i = 0; i < numSprites; i += 4) {
-                spriteAddresses.add(getUint32(
-                        new byte[]{
-                                bytesDoArquivo[i + 6],
-                                bytesDoArquivo[i + 7],
-                                bytesDoArquivo[i + 8],
-                                bytesDoArquivo[i + 9]
-                        }));
+                spriteAddresses.add(lerInt(i + 6));
             }
         }
 
         return spriteAddresses;
     }
 
+    /**
+     * Esse metodo e resposavel por capturar todos os dados de uma sprite.
+     * <p>
+     * Basicamente este metodo faz a busca dos valores dos bytes a partir
+     * do endereco repassado.
+     *
+     * @param endereco
+     * @return uma lista contendo todos os pixels de uma sprite...
+     */
     public ArrayList<Pixel> getSpriteInfo(long endereco) {
-        long enderecoInicial = (endereco + 3);
-
-        long ultimoPixel = enderecoInicial + (getUint16(
-                new byte[]{
-                        bytesDoArquivo[(int) enderecoInicial],
-                        bytesDoArquivo[(int) (enderecoInicial + 1)]
-                }));
         int tamanho = 32;
+        long enderecoInicial = (endereco + 3);
+        long ultimoPixel = enderecoInicial + (lerShort((int) enderecoInicial));
         long atual = 0;
         long enderecoAtual = (enderecoInicial + 2);
 
         while (enderecoAtual < ultimoPixel) {
-            long numPixelsTransparentes = getUint16(
-                    new byte[]{
-                            bytesDoArquivo[(int) enderecoAtual],
-                            bytesDoArquivo[(int) (enderecoAtual + 1)]
-                    }
-            );
-
+            long numPixelsTransparentes = lerShort((int) enderecoAtual);
             enderecoAtual += 2;
-
-            long numPixelsColoridos = getUint16(
-                    new byte[]{
-                            bytesDoArquivo[(int) enderecoAtual],
-                            bytesDoArquivo[(int) (enderecoAtual + 1)]
-                    }
-            );
-
+            long numPixelsColoridos = lerShort((int) enderecoAtual);
             enderecoAtual += 2;
 
             atual += numPixelsTransparentes;
-
             for (int i = 0; i < numPixelsColoridos; i++) {
                 Pixel pixel = new Pixel(
                         (int) (atual % tamanho),
                         (int) (atual / tamanho),
-                        //TODO: isso aqui precisa ser corrigido...
                         new Color(getIntFromColor(
-                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
-                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
-                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]})
+                                lerByte((int) enderecoAtual++),
+                                lerByte((int) enderecoAtual++),
+                                lerByte((int) enderecoAtual++)
                         ))
                 );
-                //                        new int[]{
-//                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
-//                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
-//                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
-//                                255
-                //}
 
                 atual++;
                 spriteInfo.add(pixel);
@@ -115,63 +123,89 @@ public class Parser {
         return spriteInfo;
     }
 
+
     /**
      * Fonte: https://stackoverflow.com/a/18037185
+     * <p>
+     * serve pra converter os 3 numeros INT em um unico INT
      *
-     * @param Red
-     * @param Green
-     * @param Blue
+     * @param red
+     * @param green
+     * @param blue
      * @return
      */
-    public int getIntFromColor(int Red, int Green, int Blue){
-        Red = (Red << 16) & 0x00FF0000; //Shift red 16-bits and mask out other stuff
-        Green = (Green << 8) & 0x0000FF00; //Shift Green 8-bits and mask out other stuff
-        Blue = Blue & 0x000000FF; //Mask out anything not blue.
+    private static int getIntFromColor(int red, int green, int blue) {
+        red = (red << 16) & 0x00FF0000; //Shift red 16-bits and mask out other stuff
+        green = (green << 8) & 0x0000FF00; //Shift green 8-bits and mask out other stuff
+        blue = blue & 0x000000FF; //Mask out anything not blue.
 
-        return 0xFF000000 | Red | Green | Blue; //0xFF000000 for 100% Alpha. Bitwise OR everything together.
+        return 0xFF000000 | red | green | blue; //0xFF000000 for 100% Alpha. Bitwise OR everything together.
     }
 
-    public byte getUint8(byte[] buffer) {
+    /**
+     * Esse metodo auxiliar retorna um novo array contendo apenas
+     * um trecho de um outro array. Isso e literalmente o tal "buffer".
+     *
+     * @param fonte
+     * @param inicio
+     * @param tamanho
+     * @return um buffer...
+     */
+    private static byte[] bufferDe(byte[] fonte, int inicio, int tamanho) {
+        byte[] r = new byte[tamanho];
+        System.arraycopy(fonte, inicio, r, 0, r.length);
+        return r;
+    }
+
+    /**
+     * Usado no lugar de "getUint8()", do JS
+     *
+     * @param inicio
+     * @return
+     */
+    private byte lerByte(int inicio) {
         return ByteBuffer
-                .wrap(buffer)
+                .wrap(bufferDe(bytesDoArquivo, inicio, 1))
                 .order(ByteOrder.LITTLE_ENDIAN)
                 .get();
     }
 
     /**
      * retorna 1 (um) INT unsigned correspondente aos bytesDoArquivo repassados.
+     * <p>
+     * usado no lugar de "getUint16()"
      *
-     * @param buffer
+     * @param
      * @return
      */
-    public int getUint16(byte[] buffer) {
+    private int lerShort(int inicio) {
         return (int) (char)
                 (ByteBuffer
-                        .wrap(buffer)
+                        .wrap(bufferDe(bytesDoArquivo, inicio, 2))
                         .order(ByteOrder.LITTLE_ENDIAN)
                         .getShort());
     }
 
     /**
      * retorna 1 (um) LONG correspondente aos bytesDoArquivo repassados.
+     * <p>
+     * usado no lugar de "getUint32()"
      *
-     * @param buffer
+     * @param
      * @return
      */
-    public long getUint32(byte[] buffer) {
+    private long lerInt(int inicio) {
         return ByteBuffer
-                .wrap(buffer)
+                .wrap(bufferDe(bytesDoArquivo, inicio, 4))
                 .order(ByteOrder.LITTLE_ENDIAN)
                 .getInt() & 0xFFFFFFFFL;
     }
 
-    public static void main(String[] args) throws IOException {
-        Parser p = new Parser();
-    }
-
+    /**
+     * Dataclass usada pra segurar os parametros que representam 1 pixel.
+     */
     private class Pixel {
         int x, y;
-        //int[] rgba;
         Color color;
 
         public Pixel(int x, int y, Color color) {
@@ -186,6 +220,16 @@ public class Parser {
      */
     public static class SpriteBuilder {
 
+        /**
+         * Cria o BufferedImage de uma sprite a partir de uma lista de pixels.
+         * <p>
+         * A sprite a ser desenhada e definida a partir do valor do parametro
+         * endereco. OK
+         *
+         * @param endereco
+         * @return um ufferedImage....
+         * @throws IOException
+         */
         public static BufferedImage imagemSprite(int endereco) throws IOException {
             Parser parser = new Parser();
             ArrayList<Pixel> spriteInfo = parser.getSpriteInfo(parser.spriteAddresses.get(endereco));
