@@ -41,7 +41,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
 
         currentBounds = new ArrayList<>();
         s = null;
-        System.out.println("Starting loading Spr parser...");
+        System.out.println("Starting loading SprParser...");
         long start = System.currentTimeMillis();
         sprParser = new SprParser();
         System.out.println((System.currentTimeMillis() - start) + " milliseconds to load SprParser.");

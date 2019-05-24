@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/extractor/SprParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/SprParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/extractor/SprParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="143" column="89" selection-start-line="143" selection-start-column="89" selection-end-line="143" selection-end-column="89" />
+            <state relative-caret-position="290">
+              <caret line="144" column="62" selection-start-line="144" selection-start-column="62" selection-end-line="144" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="133" column="50" selection-start-line="133" selection-start-column="50" selection-end-line="133" selection-end-column="50" />
+            <state relative-caret-position="323">
+              <caret line="176" column="57" selection-start-line="176" selection-start-column="57" selection-end-line="176" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3671#3672#0" expanded="true" />
@@ -133,8 +133,8 @@
         <option value="$PROJECT_DIR$/src/com/extractor/DatParser.java" />
         <option value="$PROJECT_DIR$/src/com/Main.java" />
         <option value="$PROJECT_DIR$/src/tt/M2.java" />
-        <option value="$PROJECT_DIR$/src/com/extractor/SprParser.java" />
         <option value="$PROJECT_DIR$/src/com/gui/Gui.java" />
+        <option value="$PROJECT_DIR$/src/com/extractor/SprParser.java" />
         <option value="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" />
       </list>
     </option>
@@ -369,7 +369,7 @@
       <workItem from="1558648793554" duration="267000" />
       <workItem from="1558657271050" duration="6902000" />
       <workItem from="1558664944739" duration="7384000" />
-      <workItem from="1558705416215" duration="8150000" />
+      <workItem from="1558705416215" duration="8395000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial">
       <created>1558454034910</created>
@@ -483,11 +483,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558715530847</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="implementação básica do SprParser dentro do JMapEditorCanvas">
+      <created>1558715842416</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1558715842416</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87124000" />
+    <option name="totallyTimeSpent" value="87369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1446" height="870" extended-state="6" />
@@ -502,7 +509,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32931727" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30655956" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30655956" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -536,19 +543,10 @@
     <MESSAGE value="algumas organicoes e inicio do DatParser" />
     <MESSAGE value="implementação básica do SprParser dentro do JMapEditorCanvas" />
     <option name="LAST_COMMIT_MESSAGE" value="implementação básica do SprParser dentro do JMapEditorCanvas" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="1059" column="25" selection-start-line="1059" selection-start-column="25" selection-end-line="1059" selection-end-column="25" />
-          <folding>
-            <element signature="e#33371#33372#0" expanded="true" />
-            <element signature="e#33441#33442#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/Arrays.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -859,16 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/extractor/SprParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="143" column="89" selection-start-line="143" selection-start-column="89" selection-end-line="143" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gui/Gui.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -879,10 +867,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/extractor/SprParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="144" column="62" selection-start-line="144" selection-start-column="62" selection-end-line="144" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/awt/Graphics2D.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="78" column="25" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="133" column="50" selection-start-line="133" selection-start-column="50" selection-end-line="133" selection-end-column="50" />
+        <state relative-caret-position="323">
+          <caret line="176" column="57" selection-start-line="176" selection-start-column="57" selection-end-line="176" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3671#3672#0" expanded="true" />
