@@ -29,7 +29,7 @@ Tibia.Spr.Parser.prototype = {
     },
     _assignDataViewFromArrayBuffer: function(buffer) {
         if (!buffer instanceof ArrayBuffer)
-            throw "ArrayBuffer argumento must by a valid ArrayBuffer object";
+            throw "ArrayBuffer argument must by a valid ArrayBuffer object";
 
         this._assignDataView(new DataView(buffer));
     },
@@ -69,8 +69,6 @@ Tibia.Spr.Parser.prototype = {
             this._spritesNum = b.getUint16(4, 2);
         }
 
-        document.writeln("num; " + this._spritesNum);
-
         return this._spritesNum;
     },
     getSpritesAddresses: function() {
@@ -86,8 +84,6 @@ Tibia.Spr.Parser.prototype = {
                 );
             }
         }
-
-        document.writeln(this._addresses[0]);
 
         return this._addresses;
     },
@@ -124,26 +120,33 @@ Tibia.Spr.Parser.prototype = {
         // First 3 bytes of this address might be
         // the RGB for transparency. Ignore them.
 
+        address = this._addresses[1];
+        document.writeln("address: " + address + " | ");
+
         var startingAddress = (address + 3);
-        //document.write("b.getUint16(startingAddress, 2): " + (b.getUint16(startingAddress, 2)))
+        document.writeln("startingAddress: " + startingAddress + " | ");
 
+        var lastPixel = startingAddress + b.getUint16(startingAddress, 2);
+        document.writeln("lastPixel: " + lastPixel + " | ");
 
-        var lastPixel = startingAddress + b.getUint16(startingAddress, 2),
-            size = 32,
-            current = 0,
-            currentAddress = (startingAddress + 2);
-
-        // document.writeln("startingAddress: " + startingAddress);
-        // document.writeln("lastPixel: " + lastPixel);
-        // document.writeln("currentAddress: " + currentAddress);
+        var size = 32;
+        var current = 0;
+        var currentAddress = (startingAddress + 2);
+        document.writeln("currentAddress: " + currentAddress + " | ");
 
         while (currentAddress < lastPixel) {
             var transparentPixelsNum = b.getUint16(currentAddress, 2);
+            document.writeln("transparentPixelsNum: " + transparentPixelsNum + " | ");
+
             currentAddress += 2;
+
             var coloredPixelsNum = b.getUint16(currentAddress, 2);
+            document.writeln("coloredPixelsNum: " + coloredPixelsNum + " | ");
+
             currentAddress += 2;
 
             current += transparentPixelsNum;
+            document.writeln("current: " + current + " | ");
             for (var i = 0; i < coloredPixelsNum; i++) {
                 var pixel = {
                     x: parseInt(current % size),
@@ -159,6 +162,8 @@ Tibia.Spr.Parser.prototype = {
                 current++;
                 spriteInfo.push(pixel);
             }
+
+            break;
         }
 
         return spriteInfo;

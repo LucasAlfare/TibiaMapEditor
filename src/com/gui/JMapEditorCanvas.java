@@ -4,20 +4,27 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.geom.Path2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class JMapEditorCanvas extends JComponent implements Scrollable {
 
     private int w, h;
     private int[][] tiles;
+    private static final int T_SIZE = 32;
 
     private int currX, currY;
     public int currentSelectedID = 253; //TODO: permitir usuário alterar esse valor
 
     private Dimension preferredScrollableViewportSize;
+
+    private boolean ctrlPressed = true;
+    private ArrayList<double[]> currentBounds;
+    private Shape s;
 
     public JMapEditorCanvas(int w, int h) {
         this.w = w;
@@ -28,16 +35,28 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
             Arrays.fill(tile, -1);
         }
 
-        this.setPreferredScrollableViewportSize(new Dimension((w+1) * 32, (h+1) * 32));
+        currentBounds = new ArrayList<>();
+        s = null;
+
+        this.setPreferredScrollableViewportSize(new Dimension((w+1) * T_SIZE, (h+1) * T_SIZE));
 
         addMouseMotionListener(new MouseAdapter() {
             @Override
             public void mouseDragged(MouseEvent mouseEvent) {
                 super.mouseDragged(mouseEvent);
+                s = null;
+
+                if (ctrlPressed){
+                    currentBounds.add(new double[]{
+                            mouseEvent.getPoint().getX() / T_SIZE,
+                            mouseEvent.getPoint().getY() / T_SIZE
+                    });
+                }
+
                 Point p = mouseEvent.getPoint();
-                int i = p.x/32; int j = p.y/32;
+                int i = p.x/ T_SIZE; int j = p.y/ T_SIZE;
                 if ((i >= 0 && j >= 0) && (i < JMapEditorCanvas.this.w && j < JMapEditorCanvas.this.h)){
-                    tiles[p.x/32][p.y/32] = currentSelectedID;
+                    tiles[p.x/ T_SIZE][p.y/ T_SIZE] = currentSelectedID;
                     repaint();
                 }
             }
@@ -45,8 +64,9 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
             @Override
             public void mouseMoved(MouseEvent mouseEvent) {
                 super.mouseMoved(mouseEvent);
+                s = null;
                 Point p = mouseEvent.getPoint();
-                int i = p.x/32; int j = p.y/32;
+                int i = p.x/ T_SIZE; int j = p.y/ T_SIZE;
                 if ((i >= 0 && j >= 0) && (i < JMapEditorCanvas.this.w && j < JMapEditorCanvas.this.h)){
                     currX = p.x;
                     currY = p.y;
@@ -59,19 +79,25 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
             @Override
             public void mousePressed(MouseEvent mouseEvent) {
                 super.mousePressed(mouseEvent);
+                s = null;
                 Point p = mouseEvent.getPoint();
-                int i = p.x/32; int j = p.y/32;
+                int i = p.x/ T_SIZE; int j = p.y/ T_SIZE;
                 if ((i >= 0 && j >= 0) && (i < JMapEditorCanvas.this.w && j < JMapEditorCanvas.this.h)){
-                    tiles[p.x/32][p.y/32] = currentSelectedID;
+                    tiles[p.x/ T_SIZE][p.y/ T_SIZE] = currentSelectedID;
+                    repaint();
+                }
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent mouseEvent) {
+                super.mouseReleased(mouseEvent);
+                if (ctrlPressed){
+                    s = boundsPolygon();
+                    currentBounds.clear();
                     repaint();
                 }
             }
         });
-    }
-
-    @Override
-    public Dimension getPreferredSize() {
-        return new Dimension(w * 32, h * 32);
     }
 
     @Override
@@ -87,11 +113,25 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
         }
     }
 
+    @Override
+    public Dimension getPreferredSize() {
+        return new Dimension(w * T_SIZE, h * T_SIZE);
+    }
+
     private void atualizar(Graphics2D g) throws IOException {
-        for (int i = 0; i < tiles.length * 32; i += 32) {
-            for (int j = 0; j < tiles[i/32].length * 32; j += 32) {
+        for (int i = 0; i < tiles.length * T_SIZE; i += T_SIZE) {
+            for (int j = 0; j < tiles[i/ T_SIZE].length * T_SIZE; j += T_SIZE) {
+                int ix = i/ T_SIZE, jy = j/ T_SIZE;
+
+                if (s != null){
+                    if (s.contains(ix, jy)){
+                        tiles[ix][jy] = currentSelectedID;
+                    }
+                }
+
                 g.setColor(Color.LIGHT_GRAY);
-                if (tiles[i/32][j/32] != -1){
+                if (tiles[ix][jy] != -1){
+                    //desenha o ID selecionado
                     g.drawImage(
                             ImageIO.read(new File("src/assets/sprites/10304.gif")),
                             i,
@@ -99,19 +139,31 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
                             this
                     );
                 } else {
-                    g.fillRect(i, j, 32, 32);
+                    g.fillRect(i, j, T_SIZE, T_SIZE);
                 }
                 g.setColor(Color.BLACK);
-                g.drawRect(i, j, 32, 32);
+                g.drawRect(i, j, T_SIZE, T_SIZE);
             }
         }
+    }
+
+    private Path2D.Double boundsPolygon(){
+        Path2D.Double p = new Path2D.Double();
+        if (!currentBounds.isEmpty()){
+            p.moveTo(currentBounds.get(0)[0], currentBounds.get(0)[1]);
+            for (int i = 1; i < currentBounds.size(); i++) {
+                p.lineTo(currentBounds.get(i)[0], currentBounds.get(i)[1]);
+            }
+            p.closePath();
+        }
+        return p;
     }
 
     private void mouseCursor(Graphics2D g) throws IOException {
         g.drawImage(
                 imgW_ModedAlpha(ImageIO.read(new File("src/assets/sprites/10304.gif")), 180),
-                (currX / 32) * 32,
-                (currY / 32) * 32,
+                (currX / T_SIZE) * T_SIZE,
+                (currY / T_SIZE) * T_SIZE,
                 this);
     }
 
@@ -145,12 +197,12 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
 
     @Override
     public int getScrollableUnitIncrement(Rectangle rectangle, int i, int i1) {
-        return 32;
+        return T_SIZE;
     }
 
     @Override
     public int getScrollableBlockIncrement(Rectangle rectangle, int i, int i1) {
-        return 32;
+        return T_SIZE;
     }
 
     @Override

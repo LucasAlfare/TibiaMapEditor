@@ -20,28 +20,34 @@ public class Gui extends JFrame {
 
     public Gui(){
         setSize(800, 800);
-        setExtendedState(Frame.MAXIMIZED_BOTH);
+        //setExtendedState(Frame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(3);
         setLocationRelativeTo(null);
 
         pA = new JPanel();
         pA.setName("pA");
+        pA.setFocusable(false);
 
         pB = new JPanel();
         pB.setName("pB");
+        pB.setFocusable(false);
 
         categories = new JComboBox<>();
         categories.setName("categories");
+        categories.setFocusable(false);
         setupCategories(new String[]{"GROUND", "TOWN", "NATURE", "INTERIOR"}, categories);
 
         itemsScrollPane = new JScrollPane();
         itemsScrollPane.setName("itemsPane");
+        itemsScrollPane.setFocusable(false);
         items = new JList<>();
         setupItems(new String[]{"A", "B", "C", "D", "E", "F"}, items);
 
-        canvas = new JMapEditorCanvas(10, 10);
+        canvas = new JMapEditorCanvas(100, 100);
         canvas.setName("canvas");
+        canvas.setFocusable(true);
         canvasScrollPane = new JScrollPane(canvas);
+        canvasScrollPane.setFocusable(false);
         canvasScrollPane.setName("canvasScrollPane");
 
         rootLayout = new JRelativeLayout();

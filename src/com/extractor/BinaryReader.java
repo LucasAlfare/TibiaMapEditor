@@ -30,9 +30,7 @@ public class BinaryReader extends FilterInputStream {
         incrementPosition(4);
         return ByteBuffer.wrap(this.readBytes(4))
                 .order(ByteOrder.LITTLE_ENDIAN)
-                .getInt()
-                ;
-
+                .getInt();
     }
 
     /**
