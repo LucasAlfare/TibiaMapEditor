@@ -181,6 +181,9 @@ public class Parser {
         }
     }
 
+    /**
+     * Usado pra criar uma imagem de uma sprite..
+     */
     public static class SpriteBuilder {
 
         public static BufferedImage imagemSprite(int endereco) throws IOException {
