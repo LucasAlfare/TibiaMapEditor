@@ -1,7 +1,9 @@
 package com.extractor;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferInt;
 import java.io.IOException;
-import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.file.Files;
@@ -10,26 +12,29 @@ import java.util.ArrayList;
 
 public class Parser {
 
-    RandomAccessFile raf;
-    byte[] bytes;
-    int numSprites;
+    private byte[] bytesDoArquivo;
+    private int numSprites;
 
-    ArrayList<Long> spriteAddresses;
-    ArrayList<Pixel> spriteInfo;
+    private ArrayList<Long> spriteAddresses;
+    private ArrayList<Pixel> spriteInfo;
 
     public Parser() throws IOException {
-        bytes = Files.readAllBytes(Paths.get("src/assets/tibia-8.6.spr"));
+        bytesDoArquivo = Files.readAllBytes(Paths.get("src/assets/tibia-8.6.spr"));
         spriteAddresses = new ArrayList<>();
         spriteInfo = new ArrayList<>();
 
         getNumSprites();
         getSpritesAddresses();
-        getSpriteInfo(spriteAddresses.get(1));
+        //getSpriteInfo(spriteAddresses.get(1)); // para testes..
     }
 
     public int getNumSprites() {
         if (numSprites == 0) {
-            numSprites = getUint16(new byte[]{bytes[4], bytes[5]});
+            numSprites = getUint16(
+                    new byte[]{
+                            bytesDoArquivo[4],
+                            bytesDoArquivo[5]
+                    });
         }
 
         return numSprites;
@@ -40,59 +45,87 @@ public class Parser {
             for (int i = 0; i < numSprites; i += 4) {
                 spriteAddresses.add(getUint32(
                         new byte[]{
-                                bytes[i + 6],
-                                bytes[i + 7],
-                                bytes[i + 8],
-                                bytes[i + 9]}));
+                                bytesDoArquivo[i + 6],
+                                bytesDoArquivo[i + 7],
+                                bytesDoArquivo[i + 8],
+                                bytesDoArquivo[i + 9]
+                        }));
             }
         }
 
         return spriteAddresses;
     }
 
-    public ArrayList<Pixel> getSpriteInfo(long address) {
-        long startingAddress = (address + 3);
+    public ArrayList<Pixel> getSpriteInfo(long endereco) {
+        long enderecoInicial = (endereco + 3);
 
-        //System.out.println(startingAddress);
+        long ultimoPixel = enderecoInicial + (getUint16(
+                new byte[]{
+                        bytesDoArquivo[(int) enderecoInicial],
+                        bytesDoArquivo[(int) (enderecoInicial + 1)]
+                }));
+        int tamanho = 32;
+        long atual = 0;
+        long enderecoAtual = (enderecoInicial + 2);
 
-        long lastPixel = startingAddress + (getUint16(new byte[]{bytes[(int) startingAddress], bytes[(int) (startingAddress + 1)]}));
-        int size = 32;
-        long current = 0;
-        long currentAddress = (startingAddress + 2);
-        //System.out.println(currentAddress);
+        while (enderecoAtual < ultimoPixel) {
+            long numPixelsTransparentes = getUint16(
+                    new byte[]{
+                            bytesDoArquivo[(int) enderecoAtual],
+                            bytesDoArquivo[(int) (enderecoAtual + 1)]
+                    }
+            );
 
-        while (currentAddress < lastPixel) {
-            long transparentPixelsNum = getUint16(new byte[]{bytes[(int) currentAddress], bytes[(int) (currentAddress + 1)]});
-            //System.out.println(transparentPixelsNum);
+            enderecoAtual += 2;
 
-            currentAddress += 2;
+            long numPixelsColoridos = getUint16(
+                    new byte[]{
+                            bytesDoArquivo[(int) enderecoAtual],
+                            bytesDoArquivo[(int) (enderecoAtual + 1)]
+                    }
+            );
 
-            long coloredPixelsNum = getUint16(new byte[]{bytes[(int) currentAddress], bytes[(int) (currentAddress + 1)]});
-            //System.out.println(coloredPixelsNum);
+            enderecoAtual += 2;
 
-            currentAddress += 2;
+            atual += numPixelsTransparentes;
+            System.out.println(atual);
 
-            current += transparentPixelsNum;
-            System.out.println(current);
-
-            for (int i = 0; i < coloredPixelsNum; i++) {
+            for (int i = 0; i < numPixelsColoridos; i++) {
                 Pixel pixel = new Pixel(
-                        (int)(current % size),
-                        (int)(current / size),
-                        new int[]{
-                                currentAddress++
-                        }
-                        );
-            }
+                        (int) (atual % tamanho),
+                        (int) (atual / tamanho),
+                        new Color(
+                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
+                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
+                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
+                                255
+                        )
+                );
 
-            break;
+                //                        new int[]{
+//                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
+//                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
+//                                getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
+//                                255
+                //}
+
+                atual++;
+                spriteInfo.add(pixel);
+            }
         }
 
         return spriteInfo;
     }
 
+    public byte getUint8(byte[] buffer) {
+        return ByteBuffer
+                .wrap(buffer)
+                .order(ByteOrder.LITTLE_ENDIAN)
+                .get();
+    }
+
     /**
-     * retorna 1 (um) INT unsigned correspondente aos bytes repassados.
+     * retorna 1 (um) INT unsigned correspondente aos bytesDoArquivo repassados.
      *
      * @param buffer
      * @return
@@ -106,7 +139,7 @@ public class Parser {
     }
 
     /**
-     * retorna 1 (um) LONG correspondente aos bytes repassados.
+     * retorna 1 (um) LONG correspondente aos bytesDoArquivo repassados.
      *
      * @param buffer
      * @return
@@ -122,14 +155,26 @@ public class Parser {
         Parser p = new Parser();
     }
 
-    class Pixel {
+    private class Pixel {
         int x, y;
-        int[] rgba;
+        //int[] rgba;
+        Color color;
 
-        public Pixel(int x, int y, int[] rgba) {
+        public Pixel(int x, int y, Color color) {
             this.x = x;
             this.y = y;
-            this.rgba = rgba;
+            this.color = color;
+        }
+    }
+
+    public static class SpriteBuilder {
+
+        public static BufferedImage imagemSprite(int endereco) throws IOException {
+            Parser parser = new Parser();
+            ArrayList<Pixel> spriteInfo = parser.getSpriteInfo(parser.spriteAddresses.get(endereco));
+            BufferedImage img = new BufferedImage(32, 32, BufferedImage.TYPE_INT_ARGB);
+            for (Pixel p : spriteInfo) img.setRGB(p.x, p.y, p.color.getRGB());
+            return img;
         }
     }
 }

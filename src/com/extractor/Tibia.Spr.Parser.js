@@ -159,8 +159,12 @@ Tibia.Spr.Parser.prototype = {
                     }
                 };
 
+                document.writeln("pixel.x: " + pixel.x + " | ");
+
                 current++;
                 spriteInfo.push(pixel);
+
+                break;
             }
 
             break;

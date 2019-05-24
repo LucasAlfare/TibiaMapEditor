@@ -21,7 +21,7 @@ public class BinaryReader extends FilterInputStream {
     }
 
     /**
-     * Reads a 4-byte signed integer from the current stream and advances the current position of the stream by four bytes.
+     * Reads a 4-byte signed integer from the current stream and advances the current position of the stream by four bytesDoArquivo.
      *
      * @return
      * @throws IOException
@@ -34,7 +34,7 @@ public class BinaryReader extends FilterInputStream {
     }
 
     /**
-     * Reads a 4-byte unsigned integer from the current stream and advances the position of the stream by four bytes. Returns a long as java does not have the means to have unsigned values.
+     * Reads a 4-byte unsigned integer from the current stream and advances the position of the stream by four bytesDoArquivo. Returns a long as java does not have the means to have unsigned values.
      *
      * @return
      * @throws IOException
@@ -45,7 +45,7 @@ public class BinaryReader extends FilterInputStream {
     }
 
     /**
-     * Reads a 2-byte signed integer from the current stream and advances the current position of the stream by two bytes. Returns a 32-bit int as there are not 16-bit ints in java.
+     * Reads a 2-byte signed integer from the current stream and advances the current position of the stream by two bytesDoArquivo. Returns a 32-bit int as there are not 16-bit ints in java.
      *
      * @return
      * @throws IOException
@@ -58,7 +58,7 @@ public class BinaryReader extends FilterInputStream {
     }
 
     /**
-     * Reads a 2-byte unsigned integer from the current stream using little-endian encoding and advances the position of the stream by two bytes. Returns a 32-bit int as there are not 16-bit ints in java.
+     * Reads a 2-byte unsigned integer from the current stream using little-endian encoding and advances the position of the stream by two bytesDoArquivo. Returns a 32-bit int as there are not 16-bit ints in java.
      *
      * @return
      * @throws IOException
@@ -69,7 +69,7 @@ public class BinaryReader extends FilterInputStream {
     }
 
     /**
-     * Reads a 2-byte signed integer from the current stream and advances the current position of the stream by two bytes. Returns a 32-bit int as there are not 16-bit ints in java.
+     * Reads a 2-byte signed integer from the current stream and advances the current position of the stream by two bytesDoArquivo. Returns a 32-bit int as there are not 16-bit ints in java.
      *
      * @return
      * @throws IOException
@@ -104,7 +104,7 @@ public class BinaryReader extends FilterInputStream {
     }
 
     /**
-     * Reads a 4-byte floating point value from the current stream and advances the current position of the stream by four bytes.
+     * Reads a 4-byte floating point value from the current stream and advances the current position of the stream by four bytesDoArquivo.
      *
      * @return
      * @throws IOException
@@ -157,7 +157,7 @@ public class BinaryReader extends FilterInputStream {
 
 
     /**
-     * Read an arbitrary number of bytes.
+     * Read an arbitrary number of bytesDoArquivo.
      *
      * @param length
      * @return
