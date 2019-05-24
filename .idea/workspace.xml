@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/extractor/BinaryReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/tmp/BinaryReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/extractor/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/SpriteParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/extractor/Tibia.Spr.Parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/tmp/Tibia.Spr.Parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/extractor/example.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/tmp/example.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/extractor/DatParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/DatParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/extractor/SprParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/SprParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tt/M2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tt/M2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/extractor/SpriteParser.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/extractor/SprParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="256">
+              <caret line="143" column="89" selection-start-line="143" selection-start-column="89" selection-end-line="143" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,20 +48,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/extractor/tmp/Tibia.Spr.Parser.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="621">
+              <caret line="148" column="39" lean-forward="true" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3671#3672#0" expanded="true" />
+                <element signature="e#3731#3732#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/extractor/tmp/example.html">
+        <entry file="file://$PROJECT_DIR$/src/com/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+            <state relative-caret-position="95">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,21 +112,23 @@
         <option value="$PROJECT_DIR$/src/com/Gui.java" />
         <option value="$PROJECT_DIR$/src/com/JMapEditorCanvas.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/Main.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/multibar.js" />
         <option value="$PROJECT_DIR$/src/com/extractor/extractor.js" />
         <option value="$PROJECT_DIR$/src/com/extractor/kk.js" />
         <option value="$PROJECT_DIR$/src/com/extractor/TibiaSpritesExtractor.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/example.html" />
         <option value="$PROJECT_DIR$/src/tt/M.java" />
-        <option value="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" />
-        <option value="$PROJECT_DIR$/src/com/gui/Gui.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/BinaryReader.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/Tibia.Spr.Parser.js" />
-        <option value="$PROJECT_DIR$/src/tt/M2.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/Parser.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/tmp/SpriteParser.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/SpriteParser.java" />
+        <option value="$PROJECT_DIR$/src/com/extractor/DatParser.java" />
+        <option value="$PROJECT_DIR$/src/com/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/gui/Gui.java" />
+        <option value="$PROJECT_DIR$/src/tt/M2.java" />
+        <option value="$PROJECT_DIR$/src/com/extractor/SprParser.java" />
+        <option value="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" />
       </list>
     </option>
   </component>
@@ -151,6 +162,12 @@
               <item name="Editor de Mapa" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Editor de Mapa" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="Editor de Mapa" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -246,7 +263,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.M2">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="DatParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.extractor.DatParser" />
+      <module name="Editor de Mapa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.extractor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="M" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tt.M" />
       <module name="Editor de Mapa" />
@@ -299,26 +329,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TibiaSpritesExtractor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.extractor.TibiaSpritesExtractor" />
-      <module name="Editor de Mapa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.extractor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.DatParser" />
         <item itemvalue="Application.M2" />
         <item itemvalue="Application.SprParser" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.M" />
-        <item itemvalue="Application.TibiaSpritesExtractor" />
       </list>
     </recent_temporary>
   </component>
@@ -345,7 +362,7 @@
       <workItem from="1558648793554" duration="267000" />
       <workItem from="1558657271050" duration="6902000" />
       <workItem from="1558664944739" duration="7384000" />
-      <workItem from="1558705416215" duration="1561000" />
+      <workItem from="1558705416215" duration="6854000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial">
       <created>1558454034910</created>
@@ -424,16 +441,31 @@
       <option name="project" value="LOCAL" />
       <updated>1558672242043</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="algumas organicoes e inicio do DatParser">
+      <created>1558707031125</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1558707031125</updated>
+    </task>
+    <task id="LOCAL-00013" summary="algumas organicoes e inicio do DatParser">
+      <created>1558707172644</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1558707172644</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80535000" />
+    <option name="totallyTimeSpent" value="85828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1446" height="870" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26757532" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26757532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -458,10 +490,10 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32998565" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32998565" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,23 +505,10 @@
     <MESSAGE value="Inicial" />
     <MESSAGE value="TODO: arrumar a cor, ta dando um errinho..." />
     <MESSAGE value="EXTRATOR FUNCIONA." />
-    <option name="LAST_COMMIT_MESSAGE" value="EXTRATOR FUNCIONA." />
+    <MESSAGE value="algumas organicoes e inicio do DatParser" />
+    <option name="LAST_COMMIT_MESSAGE" value="algumas organicoes e inicio do DatParser" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/javax/swing/JComboBox.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="75" column="41" lean-forward="true" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/javax/swing/JList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="98" column="45" lean-forward="true" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -580,17 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <element signature="e#99#100#0" expanded="true" />
-            <element signature="e#141#142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/io/ByteArrayInputStream.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-532">
@@ -598,13 +606,6 @@
           <folding>
             <element signature="e#738#739#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/nio/file/Files.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="682" column="25" selection-start-line="682" selection-start-column="25" selection-end-line="682" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -723,16 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gui/Gui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/io/FilterInputStream.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -771,16 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="139" column="22" lean-forward="true" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tt/M.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="617">
@@ -791,13 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/extractor/tmp/Tibia.Spr.Parser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/extractor/tmp/example.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
@@ -805,24 +779,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tt/M2.java">
+    <entry file="file://$PROJECT_DIR$/src/com/extractor/tmp/Tibia.Spr.Parser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        <state relative-caret-position="190">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/tibia-8.6.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/nio/file/Files.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="771" column="31" selection-start-line="771" selection-start-column="31" selection-end-line="771" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#757#758#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/extractor/SpriteParser.java">
+    <entry file="file://$PROJECT_DIR$/src/com/extractor/DatParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state relative-caret-position="171">
+          <caret line="9" column="57" lean-forward="true" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tt/M2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="25" column="89" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/extractor/SprParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="143" column="89" selection-start-line="143" selection-start-column="89" selection-end-line="143" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gui/Gui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="55" column="40" lean-forward="true" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="148" column="39" lean-forward="true" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3671#3672#0" expanded="true" />
+            <element signature="e#3731#3732#0" expanded="true" />
           </folding>
         </state>
       </provider>

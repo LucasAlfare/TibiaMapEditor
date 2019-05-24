@@ -23,11 +23,7 @@ public class M2 extends JFrame {
         @Override
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
-            try {
-                graphics.drawImage(SprParser.SpriteBuilder.imagemSprite(1), 50, 50, null);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            //graphics.drawImage(SprParser.SpriteBuilder.imagemSprite(50), 50, 50, null);
         }
     }
 

@@ -123,6 +123,28 @@ public class SprParser {
         return spriteInfo;
     }
 
+    /**
+     * Cria o BufferedImage de uma sprite a partir de uma lista de pixels.
+     * <p>
+     * A sprite a ser desenhada e definida a partir do valor do parametro
+     * endereco. OK
+     *
+     * @param endereco
+     * @return um ufferedImage....
+     * @throws IOException
+     */
+    public BufferedImage imagemSprite(int endereco) throws IOException {
+
+        GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice device = env.getDefaultScreenDevice();
+        GraphicsConfiguration config = device.getDefaultConfiguration();
+
+        SprParser sprParser = new SprParser();
+        ArrayList<Pixel> spriteInfo = sprParser.getSpriteInfo(sprParser.spriteAddresses.get(endereco));
+        BufferedImage img = config.createCompatibleImage(32, 32, Transparency.TRANSLUCENT);
+        for (Pixel p : spriteInfo) img.setRGB(p.x, p.y, p.color.getRGB());
+        return img;
+    }
 
     /**
      * Fonte: https://stackoverflow.com/a/18037185
@@ -212,30 +234,6 @@ public class SprParser {
             this.x = x;
             this.y = y;
             this.color = color;
-        }
-    }
-
-    /**
-     * Usado pra criar uma imagem de uma sprite..
-     */
-    public static class SpriteBuilder {
-
-        /**
-         * Cria o BufferedImage de uma sprite a partir de uma lista de pixels.
-         * <p>
-         * A sprite a ser desenhada e definida a partir do valor do parametro
-         * endereco. OK
-         *
-         * @param endereco
-         * @return um ufferedImage....
-         * @throws IOException
-         */
-        public static BufferedImage imagemSprite(int endereco) throws IOException {
-            SprParser sprParser = new SprParser();
-            ArrayList<Pixel> spriteInfo = sprParser.getSpriteInfo(sprParser.spriteAddresses.get(endereco));
-            BufferedImage img = new BufferedImage(32, 32, BufferedImage.TYPE_INT_ARGB);
-            for (Pixel p : spriteInfo) img.setRGB(p.x, p.y, p.color.getRGB());
-            return img;
         }
     }
 }

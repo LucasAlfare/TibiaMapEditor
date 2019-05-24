@@ -1,5 +1,7 @@
 package com.gui;
 
+import com.extractor.SprParser;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +20,8 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
     private static final int T_SIZE = 32;
 
     private int currX, currY;
-    public int currentSelectedID = 253; //TODO: permitir usuário alterar esse valor
+    private int currentSelectedID = 1, lastID; //TODO: permitir usuário alterar esse valor
+    private BufferedImage currentImg;
 
     private Dimension preferredScrollableViewportSize;
 
@@ -26,7 +29,9 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
     private ArrayList<double[]> currentBounds;
     private Shape s;
 
-    public JMapEditorCanvas(int w, int h) {
+    private SprParser sprParser;
+
+    public JMapEditorCanvas(int w, int h) throws IOException {
         this.w = w;
         this.h = h;
 
@@ -37,6 +42,9 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
 
         currentBounds = new ArrayList<>();
         s = null;
+        sprParser = new SprParser();
+        currentImg = sprParser.imagemSprite(currentSelectedID);
+        lastID = currentSelectedID;
 
         this.setPreferredScrollableViewportSize(new Dimension((w+1) * T_SIZE, (h+1) * T_SIZE));
 
@@ -119,6 +127,10 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
     }
 
     private void atualizar(Graphics2D g) throws IOException {
+        if (currentSelectedID != lastID){
+            currentImg = sprParser.imagemSprite(currentSelectedID);
+        }
+
         for (int i = 0; i < tiles.length * T_SIZE; i += T_SIZE) {
             for (int j = 0; j < tiles[i/ T_SIZE].length * T_SIZE; j += T_SIZE) {
                 int ix = i/ T_SIZE, jy = j/ T_SIZE;
@@ -132,12 +144,14 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
                 g.setColor(Color.LIGHT_GRAY);
                 if (tiles[ix][jy] != -1){
                     //desenha o ID selecionado
+                    long begin = System.currentTimeMillis();
                     g.drawImage(
-                            ImageIO.read(new File("src/assets/sprites/10304.gif")),
+                            currentImg,
                             i,
                             j,
                             this
                     );
+                    System.out.println("levou " + (System.currentTimeMillis() - begin) + "ms...");
                 } else {
                     g.fillRect(i, j, T_SIZE, T_SIZE);
                 }

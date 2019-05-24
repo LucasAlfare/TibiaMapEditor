@@ -1,17 +1,16 @@
 package com.extractor;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.IOException;
+import java.nio.file.Files;
 
 public class DatParser {
 
-    public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("xyz.dat");
-        Scanner scnr = new Scanner(file);
-        while(scnr.hasNextLine()){
-            String line = scnr.nextLine();
-            System.out.println(line);
-        }
+    public static void main(String[] args) throws IOException {
+        File file = new File("src/assets/tibia-8.6.dat");
+        byte[] b = Files.readAllBytes(file.toPath());
+        //ByteArrayInputStream stream = new ByteArrayInputStream(b);
+
+        System.out.println(0xff);
     }
 }
