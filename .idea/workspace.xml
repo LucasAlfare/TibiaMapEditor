@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/extractor/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/extractor/BinaryReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/tmp/BinaryReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/extractor/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/SpriteParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/extractor/Tibia.Spr.Parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/tmp/Tibia.Spr.Parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/extractor/example.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/extractor/tmp/example.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tt/M2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tt/M2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,10 +36,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/extractor/Parser.java">
+        <entry file="file://$PROJECT_DIR$/src/com/extractor/SpriteParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="109" selection-end-column="18" />
+            <state relative-caret-position="231">
+              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,32 +48,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tt/M2.java">
+        <entry file="file://$PROJECT_DIR$/src/com/extractor/tmp/Tibia.Spr.Parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#757#758#0" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/extractor/Tibia.Spr.Parser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="1368">
               <caret line="72" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/extractor/example.html">
+        <entry file="file://$PROJECT_DIR$/src/com/extractor/tmp/example.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
+            <state relative-caret-position="665">
               <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
             </state>
           </provider>
@@ -125,6 +116,8 @@
         <option value="$PROJECT_DIR$/src/com/extractor/Tibia.Spr.Parser.js" />
         <option value="$PROJECT_DIR$/src/tt/M2.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/Parser.java" />
+        <option value="$PROJECT_DIR$/src/com/extractor/tmp/SpriteParser.java" />
+        <option value="$PROJECT_DIR$/src/com/extractor/SpriteParser.java" />
       </list>
     </option>
   </component>
@@ -146,6 +139,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -210,7 +204,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,8 +285,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Parser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.extractor.Parser" />
+    <configuration name="SprParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.extractor.SprParser" />
       <module name="Editor de Mapa" />
       <extension name="coverage">
         <pattern>
@@ -321,7 +314,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.M2" />
-        <item itemvalue="Application.Parser" />
+        <item itemvalue="Application.SprParser" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.M" />
         <item itemvalue="Application.TibiaSpritesExtractor" />
@@ -350,7 +343,8 @@
       <workItem from="1558624182105" duration="4301000" />
       <workItem from="1558648793554" duration="267000" />
       <workItem from="1558657271050" duration="6902000" />
-      <workItem from="1558664944739" duration="3862000" />
+      <workItem from="1558664944739" duration="7384000" />
+      <workItem from="1558705416215" duration="1561000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial">
       <created>1558454034910</created>
@@ -408,17 +402,37 @@
       <option name="project" value="LOCAL" />
       <updated>1558668520209</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="TODO: arrumar a cor, ta dando um errinho...">
+      <created>1558669104522</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1558669104522</updated>
+    </task>
+    <task id="LOCAL-00010" summary="EXTRATOR FUNCIONA.">
+      <created>1558669171133</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1558669171133</updated>
+    </task>
+    <task id="LOCAL-00011" summary="EXTRATOR FUNCIONA.">
+      <created>1558672242043</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1558672242043</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75452000" />
+    <option name="totallyTimeSpent" value="80535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1446" height="870" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26327115" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26757532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -437,7 +451,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32797858" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32797858" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -457,7 +471,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Inicial" />
     <MESSAGE value="TODO: arrumar a cor, ta dando um errinho..." />
-    <option name="LAST_COMMIT_MESSAGE" value="TODO: arrumar a cor, ta dando um errinho..." />
+    <MESSAGE value="EXTRATOR FUNCIONA." />
+    <option name="LAST_COMMIT_MESSAGE" value="EXTRATOR FUNCIONA." />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/javax/swing/JComboBox.class">
@@ -724,20 +739,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/extractor/BinaryReader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/extractor/tmp/BinaryReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="145" column="17" lean-forward="true" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/extractor/example.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -782,29 +790,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/extractor/Tibia.Spr.Parser.js">
+    <entry file="file://$PROJECT_DIR$/src/com/extractor/tmp/Tibia.Spr.Parser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="1368">
           <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/extractor/tmp/example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tt/M2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+        <state relative-caret-position="433">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
             <element signature="e#757#758#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/extractor/Parser.java">
+    <entry file="file://$PROJECT_DIR$/src/com/extractor/SpriteParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="109" selection-end-column="18" />
+        <state relative-caret-position="231">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

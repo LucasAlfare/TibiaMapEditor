@@ -16,21 +16,21 @@
     var input = document.getElementById('spr-input'),
         canvas = document.getElementsByTagName('canvas')[0],
         ctx = canvas.getContext('2d'),
-        parser = null;
+        sprParser = null;
 
     input.onchange = function() {
-        parser = new Tibia.Spr.Parser(this.files[0]);
+        sprParser = new Tibia.Spr.Parser(this.files[0]);
 
         // Yes, we don't have event dispatchers yet.
         // Feel free to contribute ;)
         setTimeout(function() {
             var roller = document.getElementById('sprite-roller');
             roller.min = 0;
-            roller.max = parser.getNumberOfSprites();
+            roller.max = sprParser.getNumberOfSprites();
 
             roller.onchange = function() {
-                var sprCoords = parser.getSpriteInfo(
-                    parser.getSpritesAddresses()[this.value]
+                var sprCoords = sprParser.getSpriteInfo(
+                    sprParser.getSpritesAddresses()[this.value]
                 );
 
                 ctx.fillStyle = 'rgb(255, 0, 255)';

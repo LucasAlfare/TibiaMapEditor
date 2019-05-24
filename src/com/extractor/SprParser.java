@@ -19,7 +19,7 @@ import java.util.ArrayList;
  * leitura dos "bytes unsigned", pois tava muito complicado...
  */
 @SuppressWarnings("WeakerAccess")
-public class Parser {
+public class SprParser {
 
     private byte[] bytesDoArquivo;
     private int numSprites;
@@ -33,7 +33,7 @@ public class Parser {
      * @throws IOException se nao encontrar um arquivo chamado
      *                     "tibia-8.6.spr" (vou alterar isso dps)
      */
-    public Parser() throws IOException {
+    public SprParser() throws IOException {
         bytesDoArquivo = Files.readAllBytes(Paths.get("src/assets/tibia-8.6.spr"));
         spriteAddresses = new ArrayList<>();
         spriteInfo = new ArrayList<>();
@@ -231,8 +231,8 @@ public class Parser {
          * @throws IOException
          */
         public static BufferedImage imagemSprite(int endereco) throws IOException {
-            Parser parser = new Parser();
-            ArrayList<Pixel> spriteInfo = parser.getSpriteInfo(parser.spriteAddresses.get(endereco));
+            SprParser sprParser = new SprParser();
+            ArrayList<Pixel> spriteInfo = sprParser.getSpriteInfo(sprParser.spriteAddresses.get(endereco));
             BufferedImage img = new BufferedImage(32, 32, BufferedImage.TYPE_INT_ARGB);
             for (Pixel p : spriteInfo) img.setRGB(p.x, p.y, p.color.getRGB());
             return img;
