@@ -144,14 +144,12 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
                 g.setColor(Color.LIGHT_GRAY);
                 if (tiles[ix][jy] != -1){
                     //desenha o ID selecionado
-                    long begin = System.currentTimeMillis();
                     g.drawImage(
                             currentImg,
                             i,
                             j,
                             this
                     );
-                    System.out.println("levou " + (System.currentTimeMillis() - begin) + "ms...");
                 } else {
                     g.fillRect(i, j, T_SIZE, T_SIZE);
                 }
