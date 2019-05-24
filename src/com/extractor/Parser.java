@@ -94,6 +94,7 @@ public class Parser {
                 Pixel pixel = new Pixel(
                         (int) (atual % tamanho),
                         (int) (atual / tamanho),
+                        //TODO: isso aqui precisa ser corrigido...
                         new Color(
                                 getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
                                 getUint8(new byte[]{bytesDoArquivo[(int) enderecoAtual++]}),
