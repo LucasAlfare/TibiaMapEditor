@@ -128,7 +128,7 @@ public class Spr extends ParserBase {
      * endereco. OK
      *
      * @param endereco
-     * @return um ufferedImage....
+     * @return um BufferedImage....
      */
     public BufferedImage imagemSprite(int endereco) {
         ArrayList<Pixel> spriteInfo = getSpriteInfo(spriteAddresses.get(endereco));
