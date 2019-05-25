@@ -118,6 +118,7 @@ public class Spr extends ParserBase {
             }
         }
 
+        resetSeeker();
         return spriteInfo;
     }
 
