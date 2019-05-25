@@ -37,7 +37,7 @@ public class Spr extends ParserBase {
         spriteInfo = new ArrayList<>();
 
         /*
-         * carrega tudo na instancia do objeto..
+         * carrega tudo na instancia DESTE objeto..
          */
         getNumSprites();
         getEnderecosSprites();
