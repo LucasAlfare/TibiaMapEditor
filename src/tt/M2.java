@@ -1,10 +1,7 @@
 package tt;
 
-import com.extractor.SprParser;
-
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
 
 public class M2 extends JFrame {
 
@@ -23,7 +20,7 @@ public class M2 extends JFrame {
         @Override
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
-            //graphics.drawImage(SprParser.SpriteBuilder.imagemSprite(50), 50, 50, null);
+            //graphics.drawImage(Spr.SpriteBuilder.imagemSprite(50), 50, 50, null);
         }
     }
 

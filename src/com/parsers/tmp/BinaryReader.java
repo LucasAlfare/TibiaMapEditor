@@ -1,4 +1,4 @@
-package com.extractor.tmp;
+package com.parsers.tmp;
 
 import java.io.FilterInputStream;
 import java.io.IOException;

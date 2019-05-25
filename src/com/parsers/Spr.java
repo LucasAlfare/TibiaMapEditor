@@ -1,14 +1,10 @@
-package com.extractor;
+package com.parsers;
 
 import com.gui.JMapEditorCanvas;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
 /**
@@ -21,7 +17,7 @@ import java.util.ArrayList;
  * leitura dos "bytes unsigned", pois tava muito complicado...
  */
 @SuppressWarnings("WeakerAccess")
-public class SprParser {
+public class Spr extends ParserBase {
 
     private byte[] bytesDoArquivo;
     private int numSprites;
@@ -35,8 +31,9 @@ public class SprParser {
      * @throws IOException se nao encontrar um arquivo chamado
      *                     "tibia-8.6.spr" (vou alterar isso dps)
      */
-    public SprParser() throws IOException {
-        bytesDoArquivo = Files.readAllBytes(Paths.get("src/assets/tibia-8.6.spr"));
+    public Spr(String filePath) throws IOException {
+        super(filePath);
+
         spriteAddresses = new ArrayList<>();
         spriteInfo = new ArrayList<>();
 
@@ -133,16 +130,14 @@ public class SprParser {
      *
      * @param endereco
      * @return um ufferedImage....
-     * @throws IOException
      */
-    public BufferedImage imagemSprite(int endereco) throws IOException {
+    public BufferedImage imagemSprite(int endereco) {
 
         GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice device = env.getDefaultScreenDevice();
         GraphicsConfiguration config = device.getDefaultConfiguration();
 
-        SprParser sprParser = new SprParser();
-        ArrayList<Pixel> spriteInfo = sprParser.getSpriteInfo(sprParser.spriteAddresses.get(endereco));
+        ArrayList<Pixel> spriteInfo = getSpriteInfo(spriteAddresses.get(endereco));
         BufferedImage img = config.createCompatibleImage(
                 JMapEditorCanvas.T_SIZE,
                 JMapEditorCanvas.T_SIZE,
@@ -168,65 +163,6 @@ public class SprParser {
         blue = blue & 0x000000FF; //Mask out anything not blue.
 
         return 0xFF000000 | red | green | blue; //0xFF000000 for 100% Alpha. Bitwise OR everything together.
-    }
-
-    /**
-     * Esse metodo auxiliar retorna um novo array contendo apenas
-     * um trecho de um outro array. Isso e literalmente o tal "buffer".
-     *
-     * @param fonte
-     * @param inicio
-     * @param tamanho
-     * @return um buffer...
-     */
-    private static byte[] bufferDe(byte[] fonte, int inicio, int tamanho) {
-        byte[] r = new byte[tamanho];
-        System.arraycopy(fonte, inicio, r, 0, r.length);
-        return r;
-    }
-
-    /**
-     * Usado no lugar de "getUint8()", do JS
-     *
-     * @param inicio
-     * @return
-     */
-    private byte lerByte(int inicio) {
-        return ByteBuffer
-                .wrap(bufferDe(bytesDoArquivo, inicio, 1))
-                .order(ByteOrder.LITTLE_ENDIAN)
-                .get();
-    }
-
-    /**
-     * retorna 1 (um) INT unsigned correspondente aos bytesDoArquivo repassados.
-     * <p>
-     * usado no lugar de "getUint16()"
-     *
-     * @param
-     * @return
-     */
-    private int lerShort(int inicio) {
-        return (int) (char)
-                (ByteBuffer
-                        .wrap(bufferDe(bytesDoArquivo, inicio, 2))
-                        .order(ByteOrder.LITTLE_ENDIAN)
-                        .getShort());
-    }
-
-    /**
-     * retorna 1 (um) LONG correspondente aos bytesDoArquivo repassados.
-     * <p>
-     * usado no lugar de "getUint32()"
-     *
-     * @param
-     * @return
-     */
-    private long lerInt(int inicio) {
-        return ByteBuffer
-                .wrap(bufferDe(bytesDoArquivo, inicio, 4))
-                .order(ByteOrder.LITTLE_ENDIAN)
-                .getInt() & 0xFFFFFFFFL;
     }
 
     /**

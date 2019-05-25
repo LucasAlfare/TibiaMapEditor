@@ -1,6 +1,6 @@
 package com.gui;
 
-import com.extractor.SprParser;
+import com.parsers.Spr;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,7 +28,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
     private ArrayList<double[]> currentBounds;
     private Shape s;
 
-    private SprParser sprParser;
+    private Spr spr;
 
     public JMapEditorCanvas(int w, int h) throws IOException {
         this.w = w;
@@ -41,12 +41,12 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
 
         currentBounds = new ArrayList<>();
         s = null;
-        System.out.println("Starting loading SprParser...");
+        System.out.println("Starting loading Spr...");
         long start = System.currentTimeMillis();
-        sprParser = new SprParser();
-        System.out.println((System.currentTimeMillis() - start) + " milliseconds to load SprParser.");
+        spr = new Spr("src/assets/tibia-8.6.spr");
+        System.out.println((System.currentTimeMillis() - start) + " milliseconds to load Spr.");
 
-        currentImg = sprParser.imagemSprite(currentSelectedID);
+        currentImg = spr.imagemSprite(currentSelectedID);
         lastID = currentSelectedID;
 
         this.setPreferredScrollableViewportSize(new Dimension((w+1) * T_SIZE, (h+1) * T_SIZE));
@@ -132,7 +132,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
     private void atualizar(Graphics2D g) throws IOException {
         //TODO: mover isso para o metodo q ira alterar o ID
         if (currentSelectedID != lastID){
-            currentImg = sprParser.imagemSprite(currentSelectedID);
+            currentImg = spr.imagemSprite(currentSelectedID);
         }
 
         for (int i = 0; i < tiles.length * T_SIZE; i += T_SIZE) {
