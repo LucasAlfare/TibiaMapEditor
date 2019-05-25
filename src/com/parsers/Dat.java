@@ -7,22 +7,28 @@ public class Dat extends ParserBase {
     public Dat(String filePath) throws IOException {
         super(filePath);
 
-        System.out.println(lerInt());
-
-        System.out.println(lerShort());
-        System.out.println(lerShort());
-        System.out.println(lerShort());
-        System.out.println(lerShort());
+        load();
     }
 
     public void load() {
+        long datSignature = lerInt();
+
         int itemCount = lerShort();
         int creatureCount = lerShort();
         int effectCount = lerShort();
         int distanceCount = lerShort();
 
         int minclientID = 100;
+        int maxclientID = itemCount;
 
+        int id = minclientID;
+
+        byte optbyte;
+        do {
+            optbyte = lerByte();
+        } while (optbyte != 0xFF);
+
+        System.out.println("achou :D " + optbyte);
     }
 
     public static void main(String[] args) throws IOException {
