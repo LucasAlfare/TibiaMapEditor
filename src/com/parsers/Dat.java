@@ -18,6 +18,12 @@ public class Dat extends ParserBase {
         int effectCount = lerShort();
         int distanceCount = lerShort();
 
+        System.out.println(datSignature);
+        System.out.println(itemCount);
+        System.out.println(creatureCount);
+        System.out.println(effectCount);
+        System.out.println(distanceCount);
+
         int minclientID = 100;
         int maxclientID = itemCount;
 
@@ -26,7 +32,9 @@ public class Dat extends ParserBase {
         byte optbyte;
         do {
             optbyte = lerByte();
-        } while (optbyte != 0xFF);
+        } while (optbyte != 255);
+
+        System.out.println("oi " + optbyte);
     }
 
     public static void main(String[] args) throws IOException {

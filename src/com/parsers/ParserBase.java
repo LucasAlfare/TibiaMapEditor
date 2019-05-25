@@ -6,11 +6,12 @@ import java.nio.ByteOrder;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+//TODO: arrumar a questao desse seeker ai...
 public class ParserBase {
 
     private byte[] bytesDoArquivo;
-    public int indexSeeker;
-    public int lastIndexSeeker;
+    public int indexSeeker = 0;
+    public int lastIndexSeeker = 0;
 
     public ParserBase(String filePath) throws IOException {
         bytesDoArquivo = Files.readAllBytes(Paths.get(filePath));
@@ -26,7 +27,7 @@ public class ParserBase {
      * @return um buffer...
      */
     public byte[] bufferDe(byte[] fonte, int inicio, int tamanho) {
-        indexSeeker = inicio;
+        indexSeeker += tamanho;
         byte[] r = new byte[tamanho];
         System.arraycopy(fonte, inicio, r, 0, r.length);
         return r;
