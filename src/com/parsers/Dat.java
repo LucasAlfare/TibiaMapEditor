@@ -21,14 +21,12 @@ public class Dat extends ParserBase {
         int minclientID = 100;
         int maxclientID = itemCount;
 
-        int id = minclientID;
+        int currentID = minclientID;
 
         byte optbyte;
         do {
             optbyte = lerByte();
         } while (optbyte != 0xFF);
-
-        System.out.println("achou :D " + optbyte);
     }
 
     public static void main(String[] args) throws IOException {

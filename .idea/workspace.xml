@@ -4,6 +4,7 @@
     <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/parsers/Dat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parsers/Dat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/parsers/Spr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/parsers/Spr.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/parsers/Dat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+            <state relative-caret-position="131">
+              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -43,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/parsers/ParserBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="122" column="4" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="4" />
+            <state relative-caret-position="114">
+              <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#937#938#0" expanded="true" />
@@ -55,7 +56,7 @@
                 <element signature="e#2225#2226#0" expanded="true" />
                 <element signature="e#2686#2687#0" expanded="true" />
                 <element signature="e#2722#2723#0" expanded="true" />
-                <element signature="e#2894#2895#0" expanded="true" />
+                <element signature="e#2932#2933#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/parsers/Spr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2396">
-              <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+            <state relative-caret-position="131">
+              <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,8 +130,8 @@
         <option value="$PROJECT_DIR$/src/com/extractor/SprParser.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/DatParser.java" />
         <option value="$PROJECT_DIR$/src/com/parsers/DatParser.java" />
-        <option value="$PROJECT_DIR$/src/com/parsers/Spr.java" />
         <option value="$PROJECT_DIR$/src/com/parsers/ParserBase.java" />
+        <option value="$PROJECT_DIR$/src/com/parsers/Spr.java" />
         <option value="$PROJECT_DIR$/src/com/parsers/Dat.java" />
       </list>
     </option>
@@ -259,7 +260,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DatParser">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Dat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.parsers.Dat" />
       <module name="Editor de Mapa" />
@@ -327,8 +328,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DatParser" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.DatParser" />
         <item itemvalue="Application.M2" />
         <item itemvalue="Application.SprParser" />
         <item itemvalue="Application.M" />
@@ -360,7 +361,7 @@
       <workItem from="1558664944739" duration="7384000" />
       <workItem from="1558705416215" duration="8546000" />
       <workItem from="1558803232304" duration="590000" />
-      <workItem from="1558821588136" duration="2605000" />
+      <workItem from="1558821588136" duration="3161000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial">
       <created>1558454034910</created>
@@ -509,11 +510,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558823246054</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="muitos problemas e duvidas...">
+      <created>1558824469771</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1558824469771</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90715000" />
+    <option name="totallyTimeSpent" value="91271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1446" height="870" extended-state="6" />
@@ -561,7 +569,8 @@
     <MESSAGE value="EXTRATOR FUNCIONA." />
     <MESSAGE value="algumas organicoes e inicio do DatParser" />
     <MESSAGE value="implementação básica do SprParser dentro do JMapEditorCanvas" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementação básica do SprParser dentro do JMapEditorCanvas" />
+    <MESSAGE value="muitos problemas e duvidas..." />
+    <option name="LAST_COMMIT_MESSAGE" value="muitos problemas e duvidas..." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -884,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/parsers/Spr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2396">
-          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+        <state relative-caret-position="131">
+          <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -894,8 +903,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/parsers/ParserBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="122" column="4" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="4" />
+        <state relative-caret-position="114">
+          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#937#938#0" expanded="true" />
@@ -906,15 +915,15 @@
             <element signature="e#2225#2226#0" expanded="true" />
             <element signature="e#2686#2687#0" expanded="true" />
             <element signature="e#2722#2723#0" expanded="true" />
-            <element signature="e#2894#2895#0" expanded="true" />
+            <element signature="e#2932#2933#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/parsers/Dat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        <state relative-caret-position="131">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
         </state>
       </provider>
     </entry>

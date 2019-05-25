@@ -131,13 +131,12 @@ public class Spr extends ParserBase {
      * @return um ufferedImage....
      */
     public BufferedImage imagemSprite(int endereco) {
-
-        GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice device = env.getDefaultScreenDevice();
-        GraphicsConfiguration config = device.getDefaultConfiguration();
-
         ArrayList<Pixel> spriteInfo = getSpriteInfo(spriteAddresses.get(endereco));
-        BufferedImage img = config.createCompatibleImage(
+        BufferedImage img = GraphicsEnvironment
+                .getLocalGraphicsEnvironment()
+                .getDefaultScreenDevice()
+                .getDefaultConfiguration()
+                .createCompatibleImage(
                 JMapEditorCanvas.T_SIZE,
                 JMapEditorCanvas.T_SIZE,
                 Transparency.TRANSLUCENT
