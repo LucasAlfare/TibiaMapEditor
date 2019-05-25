@@ -9,8 +9,8 @@ import java.nio.file.Paths;
 public class ParserBase {
 
     private byte[] bytesDoArquivo;
-    public int seeker;
-    public int lastSeeker;
+    public int indexSeeker;
+    public int lastIndexSeeker;
 
     public ParserBase(String filePath) throws IOException {
         bytesDoArquivo = Files.readAllBytes(Paths.get(filePath));
@@ -25,7 +25,8 @@ public class ParserBase {
      * @param tamanho
      * @return um buffer...
      */
-    public static byte[] bufferDe(byte[] fonte, int inicio, int tamanho) {
+    public byte[] bufferDe(byte[] fonte, int inicio, int tamanho) {
+        indexSeeker = inicio;
         byte[] r = new byte[tamanho];
         System.arraycopy(fonte, inicio, r, 0, r.length);
         return r;
@@ -37,7 +38,7 @@ public class ParserBase {
      * @return
      */
     public byte lerByte() {
-        return lerByte(seeker);
+        return lerByte(indexSeeker);
     }
 
     /**
@@ -47,7 +48,6 @@ public class ParserBase {
      * @return
      */
     public byte lerByte(int inicio) {
-        seeker += 1;
         return ByteBuffer
                 .wrap(bufferDe(bytesDoArquivo, inicio, 1))
                 .order(ByteOrder.LITTLE_ENDIAN)
@@ -62,7 +62,7 @@ public class ParserBase {
      * @return
      */
     public int lerShort() {
-        return lerShort(seeker);
+        return lerShort(indexSeeker);
     }
 
     /**
@@ -74,7 +74,6 @@ public class ParserBase {
      * @return
      */
     public int lerShort(int inicio) {
-        seeker += 2;
         return (int) (char)
                 (ByteBuffer
                         .wrap(bufferDe(bytesDoArquivo, inicio, 2))
@@ -90,7 +89,7 @@ public class ParserBase {
      * @return
      */
     public long lerInt() {
-        return lerInt(seeker);
+        return lerInt(indexSeeker);
     }
 
     /**
@@ -102,23 +101,22 @@ public class ParserBase {
      * @return
      */
     public long lerInt(int inicio) {
-        seeker += 4;
         return ByteBuffer
                 .wrap(bufferDe(bytesDoArquivo, inicio, 4))
                 .order(ByteOrder.LITTLE_ENDIAN)
                 .getInt() & 0xFFFFFFFFL;
     }
 
-    public void setSeeker(int seeker) {
-        this.seeker = seeker;
+    public void setIndexSeeker(int indexSeeker) {
+        this.indexSeeker = indexSeeker;
     }
 
     public void resetSeeker() {
-        this.lastSeeker = this.seeker;
-        this.seeker = 0;
+        this.lastIndexSeeker = this.indexSeeker;
+        this.indexSeeker = 0;
     }
 
     public void restoreSeeker() {
-        this.seeker = this.lastSeeker;
+        this.indexSeeker = this.lastIndexSeeker;
     }
 }
