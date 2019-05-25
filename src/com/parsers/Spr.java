@@ -19,7 +19,6 @@ import java.util.ArrayList;
 @SuppressWarnings("WeakerAccess")
 public class Spr extends ParserBase {
 
-    private byte[] bytesDoArquivo;
     private int numSprites;
 
     private ArrayList<Long> spriteAddresses;

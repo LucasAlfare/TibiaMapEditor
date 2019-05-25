@@ -9,6 +9,8 @@ import java.nio.file.Paths;
 public class ParserBase {
 
     private byte[] bytesDoArquivo;
+    public int seeker;
+    public int lastSeeker;
 
     public ParserBase(String filePath) throws IOException {
         bytesDoArquivo = Files.readAllBytes(Paths.get(filePath));
@@ -32,10 +34,20 @@ public class ParserBase {
     /**
      * Usado no lugar de "getUint8()", do JS
      *
+     * @return
+     */
+    public byte lerByte() {
+        return lerByte(seeker);
+    }
+
+    /**
+     * Usado no lugar de "getUint8()", do JS
+     *
      * @param inicio
      * @return
      */
     public byte lerByte(int inicio) {
+        seeker += 1;
         return ByteBuffer
                 .wrap(bufferDe(bytesDoArquivo, inicio, 1))
                 .order(ByteOrder.LITTLE_ENDIAN)
@@ -47,10 +59,22 @@ public class ParserBase {
      * <p>
      * usado no lugar de "getUint16()"
      *
+     * @return
+     */
+    public int lerShort() {
+        return lerShort(seeker);
+    }
+
+    /**
+     * retorna 1 (um) INT unsigned correspondente aos bytesDoArquivo repassados.
+     * <p>
+     * usado no lugar de "getUint16()"
+     *
      * @param
      * @return
      */
     public int lerShort(int inicio) {
+        seeker += 2;
         return (int) (char)
                 (ByteBuffer
                         .wrap(bufferDe(bytesDoArquivo, inicio, 2))
@@ -63,13 +87,38 @@ public class ParserBase {
      * <p>
      * usado no lugar de "getUint32()"
      *
+     * @return
+     */
+    public long lerInt() {
+        return lerInt(seeker);
+    }
+
+    /**
+     * retorna 1 (um) LONG correspondente aos bytesDoArquivo repassados.
+     * <p>
+     * usado no lugar de "getUint32()"
+     *
      * @param
      * @return
      */
     public long lerInt(int inicio) {
+        seeker += 4;
         return ByteBuffer
                 .wrap(bufferDe(bytesDoArquivo, inicio, 4))
                 .order(ByteOrder.LITTLE_ENDIAN)
                 .getInt() & 0xFFFFFFFFL;
+    }
+
+    public void setSeeker(int seeker) {
+        this.seeker = seeker;
+    }
+
+    public void resetSeeker() {
+        this.lastSeeker = this.seeker;
+        this.seeker = 0;
+    }
+
+    public void restoreSeeker() {
+        this.seeker = this.lastSeeker;
     }
 }

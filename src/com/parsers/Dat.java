@@ -7,6 +7,21 @@ public class Dat extends ParserBase {
     public Dat(String filePath) throws IOException {
         super(filePath);
 
+        System.out.println(lerInt());
+
+        System.out.println(lerShort());
+        System.out.println(lerShort());
+        System.out.println(lerShort());
+        System.out.println(lerShort());
+    }
+
+    public void load() {
+        int itemCount = lerShort();
+        int creatureCount = lerShort();
+        int effectCount = lerShort();
+        int distanceCount = lerShort();
+
+        int minclientID = 100;
 
     }
 
