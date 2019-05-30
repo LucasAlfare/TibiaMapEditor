@@ -1,7 +1,8 @@
 package com.gui;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 public class Gui extends JFrame {
@@ -14,6 +15,7 @@ public class Gui extends JFrame {
     private JComboBox<String> categories;
     private JScrollPane itemsScrollPane;
     private JList<String> items;
+    private JTextField textField;
 
     private JRelativeLayout bLayout;
     private JScrollPane canvasScrollPane;
@@ -44,6 +46,9 @@ public class Gui extends JFrame {
         items = new JList<>();
         setupItems(new String[]{"A", "B", "C", "D", "E", "F"}, items);
 
+        textField = new JTextField();
+        textField.setName("textField");
+
         canvas = new JMapEditorCanvas(100, 100);
         canvas.setName("canvas");
         canvas.setFocusable(true);
@@ -64,6 +69,16 @@ public class Gui extends JFrame {
         pB.setLayout(bLayout);
         pB.add(canvasScrollPane,
                 "parentTop=true parentStart=true width=matchParent height=matchParent");
+
+        addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent keyEvent) {
+                super.keyReleased(keyEvent);
+                if (keyEvent.getKeyCode() == KeyEvent.VK_ENTER) {
+                    System.out.println("ooooiiiii");
+                }
+            }
+        });
 
         setLayout(rootLayout);
         add(pA,
