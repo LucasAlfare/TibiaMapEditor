@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/CanvasCore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com2/Brush.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com2/Canvaskk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/CanvasCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com2/CanvasCore.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,37 +34,62 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com2/Canvaskk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="152">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
+                <element signature="e#811#812#0" expanded="true" />
+                <element signature="e#1008#1009#0" expanded="true" />
+                <element signature="e#1070#1071#0" expanded="true" />
+                <element signature="e#1153#1154#0" expanded="true" />
+                <element signature="e#1213#1214#0" expanded="true" />
+                <element signature="e#189#190#0" expanded="true" />
+                <element signature="e#235#236#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
+                <element signature="e#678#679#0" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
+                <element signature="e#802#803#0" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
+                <element signature="e#985#986#0" expanded="true" />
+                <element signature="e#1081#1082#0" expanded="true" />
+                <element signature="e#1110#1111#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
+                <element signature="e#776#777#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/CanvasCore.java">
+        <entry file="file://$PROJECT_DIR$/src/com2/Brush.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com2/CanvasCore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding>
-                <element signature="e#528#529#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
+                <element signature="e#496#497#0" expanded="true" />
+                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#574#575#0" expanded="true" />
+                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,6 +155,9 @@
         <option value="$PROJECT_DIR$/src/com/parsers/ParserBase.java" />
         <option value="$PROJECT_DIR$/src/com/gui/Gui.java" />
         <option value="$PROJECT_DIR$/src/com/CanvasCore.java" />
+        <option value="$PROJECT_DIR$/src/com/Canvaskk.java" />
+        <option value="$PROJECT_DIR$/src/com2/Canvaskk.java" />
+        <option value="$PROJECT_DIR$/src/com2/Brush.java" />
       </list>
     </option>
   </component>
@@ -167,13 +196,7 @@
               <item name="Editor de Mapa" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Editor de Mapa" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="tt" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -345,7 +368,7 @@
       <workItem from="1558803232304" duration="590000" />
       <workItem from="1558821588136" duration="4788000" />
       <workItem from="1558886358489" duration="1336000" />
-      <workItem from="1559247836172" duration="1186000" />
+      <workItem from="1559247836172" duration="3001000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial">
       <created>1558454034910</created>
@@ -543,11 +566,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558826342266</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Tentando mover mecanismo do mapa para algo separado">
+      <created>1559249053113</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1559249053113</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95420000" />
+    <option name="totallyTimeSpent" value="97235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1446" height="870" extended-state="6" />
@@ -598,29 +628,12 @@
     <MESSAGE value="muitos problemas e duvidas..." />
     <MESSAGE value="fix typo" />
     <MESSAGE value="teste" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste" />
+    <MESSAGE value="Tentando mover mecanismo do mapa para algo separado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tentando mover mecanismo do mapa para algo separado" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/javax/swing/JScrollPane.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-          <folding>
-            <element signature="e#2397#2398#0" expanded="true" />
-            <element signature="e#2431#2432#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/awt/Insets.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gaga/C.java" />
     <entry file="file://$PROJECT_DIR$/src/com/gaga/GuiT.java" />
     <entry file="file://$PROJECT_DIR$/src/com/gaga/Main.java" />
@@ -898,6 +911,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="131" column="60" lean-forward="true" selection-start-line="131" selection-start-column="60" selection-end-line="131" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#1571:2862" />
+            <element signature="class#2895:3743" />
+            <element signature="method#paintComponent#0;class#JMapEditorCanvas#0" />
+            <element signature="e#4122#4123#0" expanded="true" />
+            <element signature="e#4182#4183#0" expanded="true" />
+            <element signature="method#boundsPolygon#0;class#JMapEditorCanvas#0" />
+            <element signature="method#mouseCursor#0;class#JMapEditorCanvas#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -908,24 +938,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
+    <entry file="file://$PROJECT_DIR$/src/com2/CanvasCore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/CanvasCore.java">
+    <entry file="file://$PROJECT_DIR$/src/com2/Canvaskk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com2/Brush.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>

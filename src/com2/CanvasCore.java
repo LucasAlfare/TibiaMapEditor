@@ -1,4 +1,4 @@
-package com;
+package com2;
 
 import java.util.Arrays;
 
@@ -11,7 +11,6 @@ public class CanvasCore {
     public CanvasCore(int w, int h) {
         this.w = w;
         this.h = h;
-        tiles = new int[w][h];
 
         tiles = new int[w][h];
         for (int[] tile : tiles) {
@@ -20,21 +19,21 @@ public class CanvasCore {
     }
 
     public void setTile(int x, int y, int value) {
-        if ((x >= 0 && x < w) && (y >= 0 && x < h)) {
+        if (coordInBounds(x, y)) {
             tiles[x][y] = value;
         }
     }
 
     public void resetTile(int x, int y) {
-        this.setTile(x, y, -1);
+        setTile(x, y, -1);
     }
 
     public int getTileValue(int x, int y) {
-        if ((x >= 0 && x < w) && (y >= 0 && x < h)) {
-            return tiles[x][y]; //this can return -1
-        }
+        return coordInBounds(x, y) ? tiles[x][y] : -2;
+    }
 
-        return -2; //this is a not valid acess
+    private boolean coordInBounds(int x, int y) {
+        return (x >= 0 && x < w) && (y >= 0 && x < h);
     }
 
     @Override
