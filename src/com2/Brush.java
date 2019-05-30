@@ -6,6 +6,5 @@ public abstract class Brush {
 
     public class BrushShape {
 
-
     }
 }
