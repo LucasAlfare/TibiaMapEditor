@@ -38,7 +38,7 @@ public class Canvaskk extends JComponent implements Scrollable {
                 super.mouseReleased(mouseEvent);
                 int x = mouseEvent.getX() / C.TS;
                 int y = mouseEvent.getY() / C.TS;
-                setTile(x, y);
+                setAndDrawRefresh(x, y);
             }
         });
 
@@ -55,7 +55,7 @@ public class Canvaskk extends JComponent implements Scrollable {
         });
     }
 
-    private void setTile(int x, int y) {
+    private void setAndDrawRefresh(int x, int y) {
         if (core.setTile(x, y, 45)) {
             System.out.println();
             System.out.println(String.format("x: %s, y: %s", x, y));
@@ -99,12 +99,12 @@ public class Canvaskk extends JComponent implements Scrollable {
 
     @Override
     public int getScrollableUnitIncrement(Rectangle rectangle, int i, int i1) {
-        return TS;
+        return C.TS;
     }
 
     @Override
     public int getScrollableBlockIncrement(Rectangle rectangle, int i, int i1) {
-        return TS;
+        return C.TS;
     }
 
     @Override
