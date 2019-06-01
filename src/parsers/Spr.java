@@ -1,6 +1,6 @@
-package com.parsers;
+package parsers;
 
-import com.gui.JMapEditorCanvas;
+import com2.C;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -40,7 +40,10 @@ public class Spr extends ParserBase {
          * carrega tudo na instancia DESTE objeto..
          */
         getNumSprites();
+        System.out.println("Loading sprites addresses...");
+        long a = System.currentTimeMillis();
         getEnderecosSprites();
+        System.out.println("Sprites addresses loaded in " + (System.currentTimeMillis() - a) + "ms.");
     }
 
     /**
@@ -80,7 +83,7 @@ public class Spr extends ParserBase {
     }
 
     /**
-     * Esse metodo e resposavel por capturar todos os dados de uma sprite.
+     * Esse metodo e resposavel por capturar todos os dados de UMA sprite.
      * <p>
      * Basicamente este metodo faz a busca dos valores dos bytes a partir
      * do endereco repassado.
@@ -131,18 +134,27 @@ public class Spr extends ParserBase {
      * @param endereco
      * @return um BufferedImage....
      */
-    public BufferedImage imagemSprite(int endereco) {
-        ArrayList<Pixel> spriteInfo = getSpriteInfo(spriteAddresses.get(endereco));
+    public BufferedImage spriteImage(int endereco) {
         BufferedImage img = GraphicsEnvironment
                 .getLocalGraphicsEnvironment()
                 .getDefaultScreenDevice()
                 .getDefaultConfiguration()
                 .createCompatibleImage(
-                JMapEditorCanvas.T_SIZE,
-                JMapEditorCanvas.T_SIZE,
-                Transparency.TRANSLUCENT
-        );
-        for (Pixel p : spriteInfo) img.setRGB(p.x, p.y, p.color.getRGB());
+                        C.TS,
+                        C.TS,
+                        Transparency.TRANSLUCENT);
+        for (Pixel p : getSpriteInfo(spriteAddresses.get(endereco))) img.setRGB(p.x, p.y, p.color.getRGB());
+
+//        if (endereco > -1){
+//            for (Pixel p : getSpriteInfo(spriteAddresses.get(endereco))) img.setRGB(p.x, p.y, p.color.getRGB());
+//        } else {
+//            for (int i = 0; i < C.TS; i++) {
+//                for (int j = 0; j < C.TS; j++) {
+//                    img.setRGB(i, j, Color.BLACK.getRGB());
+//                }
+//            }
+//        }
+
         return img;
     }
 

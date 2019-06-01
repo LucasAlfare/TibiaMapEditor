@@ -1,4 +1,4 @@
-package com.parsers;
+package parsers;
 
 import java.io.IOException;
 
