@@ -40,10 +40,10 @@ public class Spr extends ParserBase {
          * carrega tudo na instancia DESTE objeto..
          */
         getNumSprites();
-        System.out.println("Loading sprites addresses...");
+        System.out.println("SPR Loader: Loading sprites addresses...");
         long a = System.currentTimeMillis();
         getEnderecosSprites();
-        System.out.println("Sprites addresses loaded in " + (System.currentTimeMillis() - a) + "ms.");
+        System.out.println("SPR Loader: Sprites addresses loaded in " + (System.currentTimeMillis() - a) + "ms.");
     }
 
     /**
@@ -139,10 +139,7 @@ public class Spr extends ParserBase {
                 .getLocalGraphicsEnvironment()
                 .getDefaultScreenDevice()
                 .getDefaultConfiguration()
-                .createCompatibleImage(
-                        C.TS,
-                        C.TS,
-                        Transparency.TRANSLUCENT);
+                .createCompatibleImage(C.TS, C.TS, Transparency.TRANSLUCENT);
         for (Pixel p : getSpriteInfo(spriteAddresses.get(endereco))) img.setRGB(p.x, p.y, p.color.getRGB());
 
 //        if (endereco > -1){

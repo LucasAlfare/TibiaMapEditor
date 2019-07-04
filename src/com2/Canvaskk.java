@@ -11,9 +11,7 @@ public class Canvaskk extends JComponent implements Scrollable {
 
     private int w, h;
     private CanvasCore core;
-
     private int TS = 32;
-
     private Dimension preferredScrollableViewportSize;
 
     public Canvaskk(int w, int h) throws IOException {
@@ -21,7 +19,7 @@ public class Canvaskk extends JComponent implements Scrollable {
         this.h = h;
 
         core = new CanvasCore(w, h);
-        System.out.println(core);
+        //System.out.println(core);
 
         init();
     }
