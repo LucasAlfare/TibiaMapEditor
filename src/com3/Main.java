@@ -1,9 +1,11 @@
 package com3;
 
+import com2.C;
 import parsers.Spr;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.util.Random;
 
 public class Main extends JFrame {
 
@@ -12,17 +14,17 @@ public class Main extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(3);
 
-        Spr spr = new Spr("src/assets/tibia-8.6.spr");
+        Spr spr = new Spr(C.SPR_PATH);
 
-        int[][] mc = {
-                {1, 2, 3, 4, 5, 6},
-                {7, 8, 9, 1, 2, 3},
-                {1, 1, 1, 1, 1, 2},
-                {1, 1, 1, 1, 1, 2},
-                {1, 1, 1, 2, 1, 2}
-        };
+        int[][] mc = new int[100][100];
+        Random r = new Random();
+        for (int i = 0; i < mc.length; i++) {
+            for (int j = 0; j < mc[i].length; j++) {
+                mc[i][j] = r.nextInt(20);
+            }
+        }
 
-        Core c = new Core(mc, 2, spr);
+        Core c = new Core(mc, 10, spr);
         MCanvas mCanvas = new MCanvas(c);
         add(mCanvas);
 

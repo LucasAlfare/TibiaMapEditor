@@ -59,14 +59,15 @@ public class Core {
 
     public void setCurrView(int x, int y) {
         x = x < 0 ? 0 : x;
-        y = y < 0 ? 0 : x;
+        y = y < 0 ? 0 : y;
 
         int xx = (x + l < mainContent.length) ? x : mainContent.length - l;
         int yy = (y + l < mainContent.length) ? y : mainContent.length - l;
 
         //TODO: fazer com que esse loop só aconteça se as coordenadas forem OK
-        for (int i = 0; i < l; i++)
+        for (int i = 0; i < l; i++) {
             System.arraycopy(mainContent[xx + i], yy, currView[i], 0, l);
+        }
     }
 
     /**
@@ -107,8 +108,16 @@ public class Core {
                 (y >= 0 && y < mainContent.length);
     }
 
+    /**
+     * Retorna conteudo a partir da grade de visualizacao, e nao da grade
+     * principal, ok?
+     *
+     * @param x
+     * @param y
+     * @return
+     */
     public Image getSpriteImageFrom(int x, int y) {
-        return spr.spriteImage(mainContent[x][y]);
+        return spr.spriteImage(currView[x][y]);
     }
 
     /**
@@ -132,8 +141,9 @@ public class Core {
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder("\n");
-        for (int i = 0; i < l; i++) {
-            for (int j = 0; j < l; j++) {
+        s.append("[x=").append(currX).append(", y=").append(currY).append("]").append("\n");
+        for (int i = 0; i < currView.length; i++) {
+            for (int j = 0; j < currView[i].length; j++) {
                 s.append(currView[i][j]).append(" ");
             }
             s.append("\n");

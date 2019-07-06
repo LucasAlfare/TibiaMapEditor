@@ -92,6 +92,7 @@ public class Spr extends ParserBase {
      * @return uma lista contendo todos os pixels de uma sprite...
      */
     public ArrayList<Pixel> getSpriteInfo(long endereco) {
+        spriteInfo.clear();
         int tamanho = 32;
         long enderecoInicial = (endereco + 3);
         long ultimoPixel = enderecoInicial + (lerShort((int) enderecoInicial));
@@ -140,7 +141,9 @@ public class Spr extends ParserBase {
                 .getDefaultScreenDevice()
                 .getDefaultConfiguration()
                 .createCompatibleImage(C.TS, C.TS, Transparency.TRANSLUCENT);
-        for (Pixel p : getSpriteInfo(spriteAddresses.get(endereco))) img.setRGB(p.x, p.y, p.color.getRGB());
+        for (Pixel p : getSpriteInfo(spriteAddresses.get(endereco))) {
+            img.setRGB(p.x, p.y, p.color.getRGB());
+        }
 
 //        if (endereco > -1){
 //            for (Pixel p : getSpriteInfo(spriteAddresses.get(endereco))) img.setRGB(p.x, p.y, p.color.getRGB());
