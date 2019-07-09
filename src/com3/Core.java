@@ -66,10 +66,6 @@ public class Core {
                 (y >= 0 && y < mainContent.length);
     }
 
-    public Image getSpriteImageFrom(int x, int y) {
-        return spr.spriteImage(currView[x][y]);
-    }
-
     public ArrayList<Spr.Pixel> getSpriteInfoFrom(int x, int y) {
         return spr.getSpriteInfo(spr.spriteAddresses.get(mainContent[x][y]));
     }
