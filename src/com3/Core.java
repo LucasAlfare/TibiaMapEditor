@@ -31,14 +31,18 @@ public class Core {
         int xx = (x + l < mainContent.length) ? x : mainContent.length - l;
         int yy = (y + l < mainContent.length) ? y : mainContent.length - l;
 
+        //sempre que for desenhar a imagem e "resetada"
         mainViewImg = GraphicsEnvironment
                 .getLocalGraphicsEnvironment()
                 .getDefaultScreenDevice()
                 .getDefaultConfiguration()
                 .createCompatibleImage(l * C.TS, l * C.TS, Transparency.TRANSLUCENT);
 
+        //itera l vezes a patir da coordenada repassada
         for (int i = 0, tw = 0; i < l; i++, tw += C.TS) {
             for (int j = 0, th = 0; j < l; j++, th += C.TS) {
+                //itera sobre os valores de sprite/pixel retornados do conteudo da coordenada atual
+                //a funcao disso e desenhar esses valores de sprite/pixel na imagem grande
                 for (Spr.Pixel p : spr.getSpriteInfo(spr.spriteAddresses.get(mainContent[i + xx][j + yy]))) {
                     mainViewImg.setRGB(p.x + tw, p.y + th, p.color.getRGB());
                 }
