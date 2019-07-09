@@ -1,4 +1,4 @@
-package com3;
+package com4;
 
 import com2.C;
 import parsers.Spr;
@@ -14,15 +14,18 @@ public class Main extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(3);
 
-        //mock simples pra testar
-        int[][] c = new int[1000][1000];
-        for (int i = 0; i < c.length; i++) {
-            for (int j = 0; j < c[i].length; j++) {
-                c[i][j] = new Random().nextInt(5000);
+        Spr spr = new Spr(C.SPR_PATH);
+
+        int[][] mc = new int[100][100];
+        Random r = new Random();
+        for (int i = 0; i < mc.length; i++) {
+            for (int j = 0; j < mc[i].length; j++) {
+                mc[i][j] = r.nextInt(5000);
             }
         }
 
-        MCanvas mCanvas = new MCanvas(new Core(c, 800 / 32, new Spr(C.SPR_PATH)));
+        Core c = new Core(mc, (800 / 32) - 5, spr);
+        MCanvas mCanvas = new MCanvas(c);
         add(mCanvas);
 
         setVisible(true);

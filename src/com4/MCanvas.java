@@ -1,4 +1,6 @@
-package com3;
+package com4;
+
+import com2.C;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,10 +10,14 @@ import java.awt.event.KeyEvent;
 public class MCanvas extends JComponent {
 
     private Core core;
+    private int[][] currentView;
 
     public MCanvas(Core core) {
         this.core = core;
+        currentView = this.core.getCurrView();
         this.setFocusable(true);
+        setPreferredSize(new Dimension(currentView.length * 32, currentView[0].length * 32));
+        setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         addKeyListener(new KeyAdapter() {
             @Override
@@ -43,10 +49,20 @@ public class MCanvas extends JComponent {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        long i = System.currentTimeMillis();
-        g.drawImage(core.mainViewImg, 0, 0, this);
-        System.out.println("Demorou " + (System.currentTimeMillis() - i) + "ms!");
-
+        long s = System.currentTimeMillis();
+        for (int i = 0; i < currentView.length * C.TS; i += C.TS) {
+            for (int j = 0; j < currentView[i / C.TS].length * C.TS; j += C.TS) {
+                //TODO: chamar drawSpritePixels(int, int, Color) aqui
+                try {
+                    g.drawImage(core.getSpriteImageFrom(i / C.TS, j / C.TS), i, j, this);
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.printStackTrace();
+                    //pass
+                }
+            }
+        }
         g.dispose();
+
+        System.out.println("levou " + (System.currentTimeMillis() - s) + "ms!");
     }
 }

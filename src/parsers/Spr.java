@@ -1,9 +1,6 @@
 package parsers;
 
-import com2.C;
-
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -21,7 +18,7 @@ public class Spr extends ParserBase {
 
     private int numSprites;
 
-    private ArrayList<Long> spriteAddresses;
+    public ArrayList<Long> spriteAddresses;
     private ArrayList<Pixel> spriteInfo;
 
     /**
@@ -127,38 +124,6 @@ public class Spr extends ParserBase {
     }
 
     /**
-     * Cria o BufferedImage de uma sprite a partir de uma lista de pixels.
-     * <p>
-     * A sprite a ser desenhada e definida a partir do valor do parametro
-     * endereco. OK
-     *
-     * @param endereco
-     * @return um BufferedImage....
-     */
-    public BufferedImage spriteImage(int endereco) {
-        BufferedImage img = GraphicsEnvironment
-                .getLocalGraphicsEnvironment()
-                .getDefaultScreenDevice()
-                .getDefaultConfiguration()
-                .createCompatibleImage(C.TS, C.TS, Transparency.TRANSLUCENT);
-        for (Pixel p : getSpriteInfo(spriteAddresses.get(endereco))) {
-            img.setRGB(p.x, p.y, p.color.getRGB());
-        }
-
-//        if (endereco > -1){
-//            for (Pixel p : getSpriteInfo(spriteAddresses.get(endereco))) img.setRGB(p.x, p.y, p.color.getRGB());
-//        } else {
-//            for (int i = 0; i < C.TS; i++) {
-//                for (int j = 0; j < C.TS; j++) {
-//                    img.setRGB(i, j, Color.BLACK.getRGB());
-//                }
-//            }
-//        }
-
-        return img;
-    }
-
-    /**
      * Fonte: https://stackoverflow.com/a/18037185
      * <p>
      * serve pra converter os 3 numeros INT em um unico INT
@@ -179,9 +144,9 @@ public class Spr extends ParserBase {
     /**
      * Dataclass usada pra segurar os parametros que representam 1 pixel.
      */
-    private class Pixel {
-        int x, y;
-        Color color;
+    public class Pixel {
+        public int x, y;
+        public Color color;
 
         public Pixel(int x, int y, Color color) {
             this.x = x;
