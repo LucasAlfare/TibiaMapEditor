@@ -46,7 +46,6 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
         spr = new Spr("src/assets/tibia-8.6.spr");
         System.out.println((System.currentTimeMillis() - start) + " milliseconds to load Spr.");
 
-        currentImg = spr.spriteImage(currentSelectedID);
         lastID = currentSelectedID;
 
         this.setPreferredScrollableViewportSize(new Dimension((w+1) * T_SIZE, (h+1) * T_SIZE));
@@ -132,7 +131,7 @@ public class JMapEditorCanvas extends JComponent implements Scrollable {
     private void atualizar(Graphics2D g) throws IOException {
         //TODO: mover isso para o metodo q ira alterar o ID
         if (currentSelectedID != lastID){
-            currentImg = spr.spriteImage(currentSelectedID);
+            //currentImg = spr.spriteImage(currentSelectedID);
         }
 
         for (int i = 0; i < tiles.length * T_SIZE; i += T_SIZE) {

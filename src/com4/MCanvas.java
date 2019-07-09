@@ -54,7 +54,7 @@ public class MCanvas extends JComponent {
             for (int j = 0; j < currentView[i / C.TS].length * C.TS; j += C.TS) {
                 //TODO: chamar drawSpritePixels(int, int, Color) aqui
                 try {
-                    g.drawImage(core.getSpriteImageFrom(i / C.TS, j / C.TS), i, j, this);
+                    //g.drawImage(core.getSpriteImageFrom(i / C.TS, j / C.TS), i, j, this);
                 } catch (ArrayIndexOutOfBoundsException e) {
                     e.printStackTrace();
                     //pass

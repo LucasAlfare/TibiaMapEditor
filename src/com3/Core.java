@@ -28,7 +28,6 @@ public class Core {
         setCurrView(currX, currY);
     }
 
-    //TODO: adicionar spriteinfo em uma grande BufferedImage aqui
     public void setCurrView(int x, int y) {
         x = x < 0 ? 0 : x;
         y = y < 0 ? 0 : y;

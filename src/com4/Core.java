@@ -2,7 +2,6 @@ package com4;
 
 import parsers.Spr;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 /**
@@ -109,18 +108,6 @@ public class Core {
     public boolean isValid(int x, int y) {
         return (x >= 0 && x < mainContent.length) &&
                 (y >= 0 && y < mainContent.length);
-    }
-
-    /**
-     * Retorna conteudo a partir da grade de visualizacao, e nao da grade
-     * principal, ok?
-     *
-     * @param x
-     * @param y
-     * @return
-     */
-    public Image getSpriteImageFrom(int x, int y) {
-        return spr.spriteImage(currView[x][y]);
     }
 
     public ArrayList<Spr.Pixel> getSpriteInfoFrom(int x, int y) {
