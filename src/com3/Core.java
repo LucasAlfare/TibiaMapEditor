@@ -46,6 +46,16 @@ public class Core {
         }
     }
 
+    public void updateMainViewImg(int x, int y, int operation) {
+        /*
+        TODO: operation tem que armazenar se vai ser realizado(a):
+            - alteração do valor (consequentemente do tile correspondente);
+            - limpeza do tile (valor igual a -1);
+            - realce e/ou contorno
+            - movimentacao to tile.
+         */
+    }
+
     public void clearSlot(int x, int y) {
         setSlotValue(-1, x, y);
     }
