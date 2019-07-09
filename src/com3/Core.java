@@ -51,7 +51,7 @@ public class Core {
         TODO: operation tem que armazenar se vai ser realizado(a):
             - alteração do valor (consequentemente do tile correspondente);
             - limpeza do tile (valor igual a -1);
-            - realce e/ou contorno
+            - realce e/ou contorno;
             - movimentacao to tile.
          */
     }
