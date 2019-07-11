@@ -5,24 +5,35 @@ import parsers.Spr;
 
 import javax.swing.*;
 import java.io.IOException;
-import java.util.Random;
+import java.util.ArrayList;
 
 public class Main extends JFrame {
 
     public Main() throws IOException {
-        setSize(800, 800);
+        int s = 4;
+
+        setSize((s + 1) * 32, (s + 1) * 32);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(3);
 
-        //mock simples pra testar
-        int[][] c = new int[1000][1000];
-        for (int i = 0; i < c.length; i++) {
-            for (int j = 0; j < c[i].length; j++) {
-                c[i][j] = new Random().nextInt(5000);
+        ArrayList<ArrayList<Integer>> mapContent = new ArrayList<>();
+        for (int i = 0; i < s; i++) {
+            ArrayList<Integer> curr = new ArrayList<>();
+            for (int j = 0; j < s; j++) {
+                curr.add(1);
             }
+            mapContent.add(curr);
         }
 
-        MCanvas mCanvas = new MCanvas(new Core(c, 800 / 32, new Spr(C.SPR_PATH)));
+//        for (int i = 0; i < mapContent.size(); i++) {
+//            for (int j = 0; j < mapContent.get(i).size(); j++) {
+//                System.out.print(mapContent.get(i).get(j) + " ");
+//            }
+
+//            System.out.println();
+//        }
+
+        MCanvas mCanvas = new MCanvas(new Core(mapContent, s, new Spr(C.SPR_PATH)));
         add(mCanvas);
 
         setVisible(true);

@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com4/Core.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com4/MCanvas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com4/MKeyEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com4/MMouseEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com4/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com4/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/misc/D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com2/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com2/C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com3/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com3/Core.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/Spr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parsers/Spr.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,14 +43,52 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com3/Core.java">
+        <entry file="file://$PROJECT_DIR$/src/com4/Core.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+            <state relative-caret-position="289">
+              <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1475#1476#0" expanded="true" />
-                <element signature="e#1513#1514#0" expanded="true" />
+                <element signature="e#1691#1692#0" expanded="true" />
+                <element signature="e#1730#1731#0" expanded="true" />
+                <element signature="e#1813#1814#0" expanded="true" />
+                <element signature="e#1848#1849#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com4/MCanvas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com4/MKeyEvents.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com4/MMouseEvents.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,11 +111,13 @@
       <find>32</find>
       <find>JMapEditorCanvas.T_SIZE</find>
       <find>/TS</find>
+      <find>C.TS</find>
     </findStrings>
     <replaceStrings>
       <replace>SIZE</replace>
       <replace>C.TS</replace>
       <replace>/C.TS</replace>
+      <replace>TS</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -74,9 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/main.java" />
-        <option value="$PROJECT_DIR$/src/com/JRelativeLayout.java" />
-        <option value="$PROJECT_DIR$/src/com/GuiT.java" />
         <option value="$PROJECT_DIR$/src/com/gaga/Main.java" />
         <option value="$PROJECT_DIR$/src/com/gaga/GuiT.java" />
         <option value="$PROJECT_DIR$/src/com/gaga/JavaApplication57.java" />
@@ -111,15 +160,23 @@
         <option value="$PROJECT_DIR$/src/com2/Brush.java" />
         <option value="$PROJECT_DIR$/src/com2/Main2.java" />
         <option value="$PROJECT_DIR$/src/com2/Canvaskk.java" />
-        <option value="$PROJECT_DIR$/src/com2/C.java" />
         <option value="$PROJECT_DIR$/src/com3/MCanvas.java" />
-        <option value="$PROJECT_DIR$/src/com3/Main.java" />
-        <option value="$PROJECT_DIR$/src/parsers/Spr.java" />
         <option value="$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java" />
         <option value="$PROJECT_DIR$/src/com2/CanvasCore.java" />
-        <option value="$PROJECT_DIR$/src/com4/MCanvas.java" />
-        <option value="$PROJECT_DIR$/src/com4/Core.java" />
         <option value="$PROJECT_DIR$/src/com3/Core.java" />
+        <option value="$PROJECT_DIR$/src/com3/Main.java" />
+        <option value="$PROJECT_DIR$/src/com4/Floor.java" />
+        <option value="$PROJECT_DIR$/src/com4/MKeyListener.java" />
+        <option value="$PROJECT_DIR$/src/com4/Tile.java" />
+        <option value="$PROJECT_DIR$/src/com4/Main.java" />
+        <option value="$PROJECT_DIR$/src/com2/C.java" />
+        <option value="$PROJECT_DIR$/src/d.java" />
+        <option value="$PROJECT_DIR$/src/com4/MCanvas.java" />
+        <option value="$PROJECT_DIR$/src/parsers/Spr.java" />
+        <option value="$PROJECT_DIR$/src/misc/D.java" />
+        <option value="$PROJECT_DIR$/src/com4/MMouseEvents.java" />
+        <option value="$PROJECT_DIR$/src/com4/MKeyEvents.java" />
+        <option value="$PROJECT_DIR$/src/com4/Core.java" />
       </list>
     </option>
   </component>
@@ -141,22 +198,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,6 +215,46 @@
               <item name="Editor de Mapa" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com4" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="misc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="parsers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -198,19 +279,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/com/extractor/tmp" />
-      <recent name="$PROJECT_DIR$/src/assets" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com3" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com4" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src/com/extractor" />
       <recent name="$PROJECT_DIR$/src/com/gaga" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com4" />
+      <recent name="com3" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/extractor/tmp" />
+      <recent name="$PROJECT_DIR$/src/assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -225,39 +307,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Dat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="parsers.Dat" />
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com4.Main" />
       <module name="Editor de Mapa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="parsers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="M2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tt.M2" />
-      <module name="Editor de Mapa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com3.Main" />
-      <module name="Editor de Mapa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com3.*" />
+          <option name="PATTERN" value="com4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -266,24 +322,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Main" />
+      <option name="MAIN_CLASS_NAME" value="com4.Main" />
       <module name="Editor de Mapa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com2.Main2" />
-      <module name="Editor de Mapa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com2.*" />
+          <option name="PATTERN" value="com4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -293,11 +336,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main2" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Dat" />
-        <item itemvalue="Application.M2" />
       </list>
     </recent_temporary>
   </component>
@@ -336,7 +375,10 @@
       <workItem from="1562369460026" duration="1939000" />
       <workItem from="1562504959714" duration="6619000" />
       <workItem from="1562592398101" duration="1395000" />
-      <workItem from="1562675755627" duration="5192000" />
+      <workItem from="1562675755627" duration="5307000" />
+      <workItem from="1562797940204" duration="3039000" />
+      <workItem from="1562847800716" duration="4352000" />
+      <workItem from="1562871261020" duration="5447000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial">
       <created>1558454034910</created>
@@ -632,17 +674,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562680982658</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="adicionei um TODO..">
+      <created>1562681346917</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1562681346917</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119825000" />
+    <option name="totallyTimeSpent" value="132778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23863636" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25037935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -650,8 +699,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3284553" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.33170733" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32626426" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.33115825" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -661,7 +710,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007576" side_tool="true" weight="0.43739837" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32520324" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32463294" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -697,27 +746,6 @@
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/extractor/extractor.js" />
-    <entry file="file://$PROJECT_DIR$/src/com/extractor/kk/js.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/extractor/TibiaSpritesExtractor.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/commons-io-2.6.jar!/org/apache/commons/io/EndianUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="177" column="33" lean-forward="true" selection-start-line="177" selection-start-column="33" selection-end-line="177" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#7389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/commons-io-2.6.jar!/org/apache/commons/io/IOUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="312" column="22" lean-forward="true" selection-start-line="312" selection-start-column="22" selection-end-line="312" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/nio/ByteBuffer.class" />
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/awt/Color.class" />
     <entry file="file://$PROJECT_DIR$/.attach_pid8869" />
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/io/InputStream.class" />
@@ -826,13 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com2/C.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/jdk1.8.0_144/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -854,34 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/Spr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#getNumSprites#0;class#Spr#0" />
-            <element signature="method#getNumSprites#0;class#Spr#0" />
-            <element signature="docComment;method#getEnderecosSprites#0;class#Spr#0" />
-            <element signature="method#getEnderecosSprites#0;class#Spr#0" />
-            <element signature="docComment;method#getSpriteInfo#0;class#Spr#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="141" column="44" lean-forward="true" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#paintComponent#0;class#JMapEditorCanvas#0" />
-            <element signature="method#boundsPolygon#0;class#JMapEditorCanvas#0" />
-            <element signature="method#mouseCursor#0;class#JMapEditorCanvas#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com2/CanvasCore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -898,27 +891,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com4/Core.java">
+    <entry file="file://$PROJECT_DIR$/src/parsers/Dat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
-          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+        <state relative-caret-position="182">
+          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com3/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com3/MCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="318">
+          <caret line="45" column="44" lean-forward="true" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com3/MCanvas.java">
+    <entry file="file://$PROJECT_DIR$/src/com3/Core.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="45" column="44" lean-forward="true" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+        <state relative-caret-position="272">
+          <caret line="83" column="17" lean-forward="true" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com3/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="37" column="84" selection-start-line="37" selection-start-column="84" selection-end-line="37" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com4/Floor.java" />
+    <entry file="jar://$USER_HOME$/jdk1.8.0_144/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="490" column="13" selection-start-line="490" selection-start-column="13" selection-end-line="490" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gui/JMapEditorCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="52" column="51" lean-forward="true" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#paintComponent#0;class#JMapEditorCanvas#0" />
+            <element signature="method#boundsPolygon#0;class#JMapEditorCanvas#0" />
+            <element signature="method#mouseCursor#0;class#JMapEditorCanvas#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com2/C.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="69" lean-forward="true" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com4/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com4/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsers/Spr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#getNumSprites#0;class#Spr#0" />
+            <element signature="docComment;method#getEnderecosSprites#0;class#Spr#0" />
+            <element signature="docComment;method#getSpriteInfo#0;class#Spr#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misc/D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -927,33 +1002,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com4/MCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com4/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsers/Dat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com3/Core.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+        <state relative-caret-position="118">
+          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1475#1476#0" expanded="true" />
-            <element signature="e#1513#1514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com4/MMouseEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com4/MKeyEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com4/Core.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1730#1731#0" expanded="true" />
+            <element signature="e#1813#1814#0" expanded="true" />
+            <element signature="e#1848#1849#0" expanded="true" />
           </folding>
         </state>
       </provider>

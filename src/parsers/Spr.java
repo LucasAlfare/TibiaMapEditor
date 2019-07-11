@@ -1,5 +1,7 @@
 package parsers;
 
+import misc.D;
+
 import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -37,10 +39,10 @@ public class Spr extends ParserBase {
          * carrega tudo na instancia DESTE objeto..
          */
         getNumSprites();
-        System.out.println("SPR Loader: Loading sprites addresses...");
+        D.d(getClass(), "Loading sprites addresses...");
         long a = System.currentTimeMillis();
         getEnderecosSprites();
-        System.out.println("SPR Loader: Sprites addresses loaded in " + (System.currentTimeMillis() - a) + "ms.");
+        D.d(getClass(), "Sprites addresses loaded in " + (System.currentTimeMillis() - a) + "ms.");
     }
 
     /**

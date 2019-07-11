@@ -44,7 +44,7 @@ public class Gui extends JFrame {
         itemsScrollPane.setName("itemsPane");
         itemsScrollPane.setFocusable(false);
         items = new JList<>();
-        setupItems(new String[]{"A", "B", "C", "D", "E", "F"}, items);
+        setupItems(new String[]{"A", "B", "C", "misc.D", "E", "F"}, items);
 
         textField = new JTextField();
         textField.setName("textField");
