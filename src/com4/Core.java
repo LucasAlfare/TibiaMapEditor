@@ -108,7 +108,7 @@ public class Core {
 
     /*
     TODO:
-        - marcação fica em Tile errado depois de mexer no teclado;
+        - corrigir marcação q fica em Tile errado depois de mexer no teclado;
         - tentar mudar o parametro para um Tile.
      */
     public void markTile(int x, int y) {
