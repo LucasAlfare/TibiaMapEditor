@@ -5,6 +5,9 @@ import java.util.Date;
 
 public class D {
 
+    /*
+    "d" de debugar...
+     */
     public static String d(Class origin, String msg) {
         StringBuilder sb = new StringBuilder();
 

@@ -9,7 +9,7 @@ import java.io.IOException;
 public class Main extends JFrame {
 
     public Main() throws IOException {
-        int s = 10;
+        int s = 20;
         setSize((s * C.TS) + 1, (s * C.TS) + 1);
         setDefaultCloseOperation(3);
         setLocationRelativeTo(null);
