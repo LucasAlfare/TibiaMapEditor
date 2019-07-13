@@ -59,7 +59,7 @@ public class Floor {
         long s = System.currentTimeMillis();
         for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
             for (int j = 0, th = 0; j < viewSize; j++, th += TS) {
-                //pinta o chao
+                //pinta o chao aaaaaa
                 for (int currContent : groundLayer.tileElements[i + xx][j + yy]) {
                     paintContentPixels(currContent, tw, th);
                 }
