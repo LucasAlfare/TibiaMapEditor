@@ -30,9 +30,11 @@ public class Floor {
     }
 
     public void renderFloor(int x, int y) {
+        System.out.println("x: " + x + ", y: " + y);
         x = x <= 0 ? 0 : x;
         y = y <= 0 ? 0 : y;
-        //System.out.println("x: " + x + ", y: " + y);
+        System.out.println("x: " + x + ", y: " + y);
+        System.out.println();
 
         int xx = x + viewSize < mapSize ? x : mapSize - viewSize;
         int yy = y + viewSize < mapSize ? y : mapSize - viewSize;

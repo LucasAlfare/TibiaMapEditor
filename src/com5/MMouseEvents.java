@@ -6,6 +6,7 @@ import misc.D;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Random;
 
 public class MMouseEvents extends MouseAdapter {
 
@@ -23,10 +24,10 @@ public class MMouseEvents extends MouseAdapter {
         updateClickInfo(e);
         switch (getClickedTileElement().getTileElementState()) {
             case GROUND:
-                mCanvas.floor.objectLayer.tileElements[cX][cY].add(1);
+                mCanvas.floor.objectLayer.tileElements[cX][cY].add(new Random().nextInt(5000));
                 break;
             case STACK:
-                mCanvas.floor.objectLayer.tileElements[cX][cY].add(1);
+                mCanvas.floor.objectLayer.tileElements[cX][cY].add(new Random().nextInt(5000));
                 break;
         }
 
