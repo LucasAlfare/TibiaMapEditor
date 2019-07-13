@@ -12,7 +12,7 @@ public class MCanvas extends JComponent {
     public Floor floor;
     public Layer gl, ol;
 
-    public int mapSize = 50, viewSize = 10;
+    public int mapSize = 100, viewSize = 20;
 
     public MKeyEvents mKeyEvents;
     public MMouseEvents mMouseEvents;
@@ -32,7 +32,7 @@ public class MCanvas extends JComponent {
     }
 
     public void update() {
-        floor.renderFloor(floor.currX, floor.currY);
+        floor.renderFloorImage(floor.currX, floor.currY);
         repaint();
     }
 

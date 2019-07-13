@@ -17,6 +17,8 @@ public class Floor {
     public BufferedImage image;
     public int currX, currY;
 
+    private BufferedImage currentSubImage;
+
     public int viewSize, mapSize;
 
     public Floor(Layer groundLayer, Layer objectLayer, int viewSize) {
@@ -29,7 +31,7 @@ public class Floor {
         System.out.println(viewSize);
         System.out.println(mapSize);
 
-        renderFloor(currX, currY);
+        renderFloorImage(currX, currY);
     }
 
     /*
@@ -37,8 +39,10 @@ public class Floor {
         - performance pode melhorar evitando de desenhar pilhas muito grandes.
             pode ser uma boa alternativa limitar o desenho da pilha somente para os ultimos
             X itens!
+        - achar um jeito de guardar um desenho e so iterar pixels se o atual for diferente
+            do anterior! (talvez seja possivel guardando isso em uma subImage!)
      */
-    public void renderFloor(int x, int y) {
+    public void renderFloorImage(int x, int y) {
         int xx = x + viewSize < mapSize ? x : mapSize - viewSize;
         int yy = y + viewSize < mapSize ? y : mapSize - viewSize;
 
@@ -57,15 +61,16 @@ public class Floor {
                     paintContentPixels(currContent, tw, th);
                 }
 
-                //pinta os objetos que estiverem sobre o chao (mesmo lugar)
-                for (int currContent : objectLayer.tileElements[i + xx][j + yy]) {
-                    if (currContent > 0) {
-                        paintContentPixels(currContent, tw, th);
+                if (!objectLayer.tileElements[i + xx][j + yy].isEmpty()) {
+                    //pinta os objetos que estiverem sobre o chao (mesmo lugar)
+                    for (int currContent : objectLayer.tileElements[i + xx][j + yy]) {
+                        if (currContent > 0) {
+                            paintContentPixels(currContent, tw, th);
+                        }
                     }
                 }
             }
         }
-
         D.d(getClass(), "Imagem do andar de ID [" + ID + "] foi desenhada em " + (System.currentTimeMillis() - s) + "ms!!!!");
     }
 
