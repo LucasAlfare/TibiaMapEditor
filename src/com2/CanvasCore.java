@@ -47,7 +47,7 @@ public class CanvasCore {
 
     public Image getTileSpriteImage(int x, int y) {
         if (coordInBounds(x, y)) {
-            //return sprParser.spriteImage(elements[x][y]);
+            //return sprParser.spriteImage(tileElements[x][y]);
         }
         return null;
     }

@@ -3,11 +3,11 @@ package misc;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/*
+"DEBUG"
+ */
 public class D {
 
-    /*
-    "d" de debugar...
-     */
     public static String d(Class origin, String msg) {
         StringBuilder sb = new StringBuilder();
 

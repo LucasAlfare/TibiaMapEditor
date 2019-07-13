@@ -33,6 +33,6 @@ public class Element extends ArrayList<Integer> {
 
     @Override
     public String toString() {
-        return D.d(getClass(), "Este Element [" + x + ", " + y + "] contem os itens: " + super.toString());
+        return D.d(getClass(), "Este TileElement [" + x + ", " + y + "] contem os itens: " + super.toString());
     }
 }

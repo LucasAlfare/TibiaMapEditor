@@ -21,7 +21,7 @@ public class Floor {
         this.objectLayer = objectLayer;
         this.viewSize = viewSize;
 
-        mapSize = groundLayer.elements.length;
+        mapSize = groundLayer.tileElements.length;
 
         System.out.println(viewSize);
         System.out.println(mapSize);
@@ -47,12 +47,12 @@ public class Floor {
         for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
             for (int j = 0, th = 0; j < viewSize; j++, th += TS) {
                 //pinta o chao
-                for (int currContent : groundLayer.elements[i + xx][j + yy]) {
+                for (int currContent : groundLayer.tileElements[i + xx][j + yy]) {
                     paintContentPixels(currContent, tw, th);
                 }
 
                 //pinta os objetos que estiverem sobre o chao (mesmo lugar)
-                for (int currContent : objectLayer.elements[i + xx][j + yy]) {
+                for (int currContent : objectLayer.tileElements[i + xx][j + yy]) {
                     if (currContent > 0) {
                         paintContentPixels(currContent, tw, th);
                     }

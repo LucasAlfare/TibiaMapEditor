@@ -23,8 +23,8 @@ public abstract class Layer {
         this.elements = new Element[25][25];
         for (int i = 0; i < this.elements.length; i++) {
             for (int j = 0; j < this.elements[i].length; j++) {
-                //Element de Ground devem conter apenas 1 item (o chao)
-                //Ja Element de objetos (outras coisas que ficam no ground,
+                //TileElement de Ground devem conter apenas 1 item (o chao)
+                //Ja TileElement de objetos (outras coisas que ficam no ground,
                 //podem conter mais de uma coisa.
                 Element curr = new Element(i, j);
                 curr.add(10);

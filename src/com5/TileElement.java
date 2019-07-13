@@ -5,34 +5,34 @@ import misc.D;
 import java.util.ArrayList;
 
 
-public class Element extends ArrayList<Integer> {
+public class TileElement extends ArrayList<Integer> {
 
     public int x, y;
 
-    public Element(int x, int y) {
+    public TileElement(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public void resetElement() {
+    public void resetTileElement() {
         this.clear();
     }
 
-    public void removeLast() {
+    public void removeLastTileElement() {
         if (this.size() > 1) {
             remove(size() - 1);
         }
     }
 
-    public void clearElement() {
+    public void clearTileElement() {
         int sz = size();
         for (int i = 0; i < sz; i++) {
-            removeLast();
+            removeLastTileElement();
         }
     }
 
     @Override
     public String toString() {
-        return D.d(getClass(), "Este Element [" + x + ", " + y + "] contem os itens: " + super.toString());
+        return D.d(getClass(), "Este TileElement (map coord)[" + x + ", " + y + "] contém os itens: " + super.toString());
     }
 }

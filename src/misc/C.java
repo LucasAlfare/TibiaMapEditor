@@ -5,10 +5,13 @@ import parsers.Spr;
 import java.awt.*;
 import java.io.IOException;
 
+/*
+"CONSTANTES"
+ */
 public class C {
 
     /**
-     * standard Element Size
+     * standard TileElement Size
      */
     public static final int TS = 32;
 

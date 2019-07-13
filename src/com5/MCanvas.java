@@ -15,7 +15,7 @@ public class MCanvas extends JComponent {
     public int mapSize = 50, viewSize = 10;
 
     public MKeyEvents mKeyEvents;
-//    public MMouseEvents mMouseEvents;
+    public MMouseEvents mMouseEvents;
 
     public MCanvas() {
         this.setFocusable(true);
@@ -25,10 +25,10 @@ public class MCanvas extends JComponent {
         floor = new Floor(gl, ol, viewSize);
 
         mKeyEvents = new MKeyEvents(this);
-//        mMouseEvents = new MMouseEvents(this);
-//
+        mMouseEvents = new MMouseEvents(this);
+
         addKeyListener(mKeyEvents);
-//        addMouseListener(mMouseEvents);
+        addMouseListener(mMouseEvents);
     }
 
     @Override

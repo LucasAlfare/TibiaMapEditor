@@ -103,8 +103,8 @@ public class Core {
 
     /*
     TODO:
-        - corrigir marcação q fica em Element errado depois de mexer no teclado;
-        - tentar mudar o parametro para um Element.
+        - corrigir marcação q fica em TileElement errado depois de mexer no teclado;
+        - tentar mudar o parametro para um TileElement.
      */
     @Deprecated
     public void markTile(int x, int y) {
