@@ -31,6 +31,11 @@ public class MCanvas extends JComponent {
         addMouseListener(mMouseEvents);
     }
 
+    public void update() {
+        floor.renderFloor(floor.currX, floor.currY);
+        repaint();
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

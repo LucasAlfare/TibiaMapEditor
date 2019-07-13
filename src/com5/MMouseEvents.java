@@ -10,29 +10,49 @@ import java.awt.event.MouseEvent;
 public class MMouseEvents extends MouseAdapter {
 
     public MCanvas mCanvas;
-    public int clickX, clickY;
+    public int cX, cY; //coordenadas de clique atuais
+    public Point p;
 
     public MMouseEvents(MCanvas mCanvas) {
         this.mCanvas = mCanvas;
     }
 
     @Override
+    public void mouseClicked(MouseEvent e) {
+        super.mouseClicked(e);
+        updateClickInfo(e);
+        switch (getClickedTileElement().getTileElementState()) {
+            case GROUND:
+                mCanvas.floor.objectLayer.tileElements[cX][cY].add(1);
+                break;
+            case STACK:
+                mCanvas.floor.objectLayer.tileElements[cX][cY].add(1);
+                break;
+        }
+
+        mCanvas.update();
+    }
+
+    @Override
     public void mouseReleased(MouseEvent e) {
         super.mouseReleased(e);
-        Point p = e.getPoint();
-        clickX = (p.x / C.TS) + mCanvas.floor.currX;
-        clickY = (p.y / C.TS) + mCanvas.floor.currY;
-        D.d(getClass(), "Coordenadas clique (mouseReleased): [" + clickX + ", " + clickY + "]");
-        System.out.println(getClickedTileElement());
+        updateClickInfo(e);
+        D.d(getClass(), "Coordenadas clique (mouseReleased): [" + cX + ", " + cY + "]");
 
         mCanvas.repaint();
     }
 
+    private void updateClickInfo(MouseEvent e) {
+        p = e.getPoint();
+        cX = (p.x / C.TS) + mCanvas.floor.currX;
+        cY = (p.y / C.TS) + mCanvas.floor.currY;
+    }
+
     public TileElement getClickedTileElement() {
-        if (!mCanvas.floor.objectLayer.tileElements[clickX][clickY].isEmpty()) {
-            return mCanvas.floor.objectLayer.tileElements[clickX][clickY];
-        } else if (mCanvas.floor.groundLayer.tileElements[clickX][clickY].size() == 1) {
-            return mCanvas.floor.groundLayer.tileElements[clickX][clickY];
+        if (!mCanvas.floor.objectLayer.tileElements[cX][cY].isEmpty()) {
+            return mCanvas.floor.objectLayer.tileElements[cX][cY];
+        } else if (mCanvas.floor.groundLayer.tileElements[cX][cY].size() == 1) {
+            return mCanvas.floor.groundLayer.tileElements[cX][cY];
         }
 
         return null; //nao há elementos, está "preto", "vazio"...

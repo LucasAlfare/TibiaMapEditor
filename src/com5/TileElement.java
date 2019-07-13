@@ -9,6 +9,10 @@ public class TileElement extends ArrayList<Integer> {
 
     public int x, y;
 
+    public enum State {
+        EMPTY, GROUND, STACK
+    }
+
     public TileElement(int x, int y) {
         this.x = x;
         this.y = y;
@@ -28,6 +32,16 @@ public class TileElement extends ArrayList<Integer> {
         int sz = size();
         for (int i = 0; i < sz; i++) {
             removeLastTileElement();
+        }
+    }
+
+    public State getTileElementState() {
+        if (isEmpty()) {
+            return State.EMPTY;
+        } else if (size() == 1) {
+            return State.GROUND;
+        } else {
+            return State.STACK;
         }
     }
 

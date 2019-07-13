@@ -16,7 +16,7 @@ public class MMouseEvents extends MouseAdapter {
     public MMouseEvents(MCanvas mCanvas) {
         this.mCanvas = mCanvas;
         core = this.mCanvas.getCore();
-        //core.markTile(clickX, clickY);
+        //core.markTile(cX, cY);
     }
 
     @Override
@@ -27,7 +27,7 @@ public class MMouseEvents extends MouseAdapter {
         clickY = (p.y / C.TS) + core.currY;
         D.d(getClass(), "Coordenadas clique: [" + clickX + ", " + clickY + "]");
 
-        //core.markTile(clickX, clickY);
+        //core.markTile(cX, cY);
         System.out.println(getClickedTile().get(0));
         mCanvas.repaint();
     }
