@@ -6,9 +6,10 @@ import misc.D;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 import java.util.Random;
 
-public class MMouseEvents extends MouseAdapter {
+public class MMouseEvents extends MouseAdapter implements MouseMotionListener {
 
     public MCanvas mCanvas;
     public int cx, cy; //coordenadas de clique atuais
