@@ -5,12 +5,14 @@ import parsers.Spr;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.Random;
 
 import static misc.C.SPR;
 import static misc.C.TS;
 
 public class Floor {
 
+    public static final int ID = new Random().nextInt();
     public Layer groundLayer, objectLayer;
     public BufferedImage image;
     public int currX, currY;
@@ -64,7 +66,7 @@ public class Floor {
             }
         }
 
-        D.d(getClass(), "Imagem do andar atual desenhada em " + (System.currentTimeMillis() - s) + "ms!!!!");
+        D.d(getClass(), "Imagem do andar de ID [" + ID + "] foi desenhada em " + (System.currentTimeMillis() - s) + "ms!!!!");
     }
 
     private void paintContentPixels(int targetContentValue, int tw, int th) {
