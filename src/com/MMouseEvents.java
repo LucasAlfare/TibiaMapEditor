@@ -23,6 +23,7 @@ public class MMouseEvents extends MouseAdapter implements MouseMotionListener {
     public void mouseClicked(MouseEvent e) {
         super.mouseClicked(e);
         updateClickInfo(e);
+        D.d(getClass(), "Coordenadas clique (mouseReleased): [" + cx + ", " + cy + "]");
         switch (getClickedTileElement().getTileElementState()) {
             case GROUND:
                 mCanvas.floor.objectLayer.tileElements[cx][cy].add(new Random().nextInt(5000));

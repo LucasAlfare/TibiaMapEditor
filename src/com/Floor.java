@@ -16,9 +16,7 @@ public class Floor {
     public static final int ID = new Random().nextInt();
     public Layer groundLayer, objectLayer;
     public BufferedImage image;
-    public int currX, currY;
-
-    private BufferedImage currentSubImage;
+    public int currX, currY, targetX, targetY;
 
     public int viewSize, mapSize;
 
@@ -29,13 +27,12 @@ public class Floor {
 
         mapSize = groundLayer.tileElements.length;
 
-        System.out.println(viewSize);
-        System.out.println(mapSize);
-
-        renderFloorImage(currX, currY);
+        objectLayer.tileElements[0][0].add(2);
+        objectLayer.tileElements[viewSize - 1][viewSize - 1].add(1);
+        renderFloorImage2(currX, currY);
     }
 
-    /*
+    /**
     TODO:
         - performance pode melhorar evitando de desenhar pilhas muito grandes.
             pode ser uma boa alternativa limitar o desenho da pilha somente para os ultimos
@@ -48,13 +45,7 @@ public class Floor {
         int yy = y + viewSize < mapSize ? y : mapSize - viewSize;
 
         //sempre que for desenhar a imagem e "resetada"
-        image = GraphicsEnvironment
-                .getLocalGraphicsEnvironment()
-                .getDefaultScreenDevice()
-                .getDefaultConfiguration()
-                .createCompatibleImage(
-                        viewSize * TS, viewSize * TS,
-                        BufferedImage.TYPE_INT_ARGB);
+        image = rawImage(viewSize * TS, viewSize * TS);
 
         long s = System.currentTimeMillis();
         for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
@@ -77,10 +68,49 @@ public class Floor {
         D.d(getClass(), "Imagem do andar de ID [" + ID + "] foi desenhada em " + (System.currentTimeMillis() - s) + "ms!!!!");
     }
 
-    private void paintContentPixels(int targetContentValue, int tw, int th) {
-        for (Spr.Pixel p : SPR.getSpriteInfo(SPR.spriteAddresses.get(targetContentValue))) {
-            image.setRGB(p.x + tw, p.y + th, p.color.getRGB());
+    public void renderFloorImage2(int x, int y) {
+        if (image == null) {
+            renderFloorImage(x, y);
+        } else {
+            int xx = x + viewSize < mapSize ? x : mapSize - viewSize;
+            int yy = y + viewSize < mapSize ? y : mapSize - viewSize;
+
+            System.out.println("targets: " + targetX + "," + targetY);
+            System.out.println("currents: " + currX + "," + currY);
+
+            BufferedImage aux = rawImage(image.getWidth(), image.getHeight());
+
+            aux.getGraphics()
+                    .drawImage(image
+                                    .getSubimage(
+                                            targetX * TS,
+                                            targetY * TS,
+                                            image.getWidth() - (targetX == 1 ? TS : 0),
+                                            image.getHeight() - (targetY == 1 ? TS : 0)),
+                            0, 0, null);
+
+            image = aux;
         }
+    }
+
+    private void paintContentPixels(int targetContentValue, int tw, int th) {
+        paintContentPixels(image, targetContentValue, tw, th);
+    }
+
+    private void paintContentPixels(BufferedImage targetImage, int targetContentValue, int tw, int th) {
+        for (Spr.Pixel p : SPR.getSpriteInfo(SPR.spriteAddresses.get(targetContentValue))) {
+            targetImage.setRGB(p.x + tw, p.y + th, p.color.getRGB());
+        }
+    }
+
+    private BufferedImage rawImage(int w, int h) {
+        return GraphicsEnvironment
+                .getLocalGraphicsEnvironment()
+                .getDefaultScreenDevice()
+                .getDefaultConfiguration()
+                .createCompatibleImage(
+                        w, h,
+                        BufferedImage.TYPE_INT_ARGB);
     }
 
     private static void copyImgToAnotherAt(BufferedImage src, BufferedImage dst, int dx, int dy) {

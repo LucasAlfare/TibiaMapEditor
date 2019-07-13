@@ -15,7 +15,7 @@ public class D {
         sb.append(": [").append(origin.getName()).append("]");
         sb.append(" ").append(msg);
 
-        System.out.println(sb.toString());
+        //System.out.println(sb.toString());
         return sb.toString();
     }
 }
