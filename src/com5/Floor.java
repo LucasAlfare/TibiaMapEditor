@@ -1,5 +1,6 @@
 package com5;
 
+import misc.D;
 import parsers.Spr;
 
 import java.awt.*;
@@ -29,13 +30,13 @@ public class Floor {
         renderFloor(currX, currY);
     }
 
+    /*
+    TODO:
+        - performance pode melhorar evitando de desenhar pilhas muito grandes.
+            pode ser uma boa alternativa limitar o desenho da pilha somente para os ultimos
+            X itens!
+     */
     public void renderFloor(int x, int y) {
-        System.out.println("x: " + x + ", y: " + y);
-        x = x <= 0 ? 0 : x;
-        y = y <= 0 ? 0 : y;
-        System.out.println("x: " + x + ", y: " + y);
-        System.out.println();
-
         int xx = x + viewSize < mapSize ? x : mapSize - viewSize;
         int yy = y + viewSize < mapSize ? y : mapSize - viewSize;
 
@@ -46,6 +47,7 @@ public class Floor {
                 .getDefaultConfiguration()
                 .createCompatibleImage(viewSize * TS, viewSize * TS, BufferedImage.TYPE_INT_ARGB);
 
+        long s = System.currentTimeMillis();
         for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
             for (int j = 0, th = 0; j < viewSize; j++, th += TS) {
                 //pinta o chao
@@ -61,6 +63,8 @@ public class Floor {
                 }
             }
         }
+
+        D.d(getClass(), "Imagem do andar atual desenhada em " + (System.currentTimeMillis() - s) + "ms!!!!");
     }
 
     private void paintContentPixels(int targetContentValue, int tw, int th) {
