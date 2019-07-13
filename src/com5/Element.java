@@ -1,15 +1,21 @@
-package com4;
+package com5;
+
+import misc.D;
 
 import java.util.ArrayList;
 
 
-public class Tile extends ArrayList<Integer> {
+public class Element extends ArrayList<Integer> {
 
     public int x, y;
 
-    public Tile(int x, int y) {
+    public Element(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    public void resetElement() {
+        this.clear();
     }
 
     public void removeLast() {
@@ -18,7 +24,7 @@ public class Tile extends ArrayList<Integer> {
         }
     }
 
-    public void clearTile() {
+    public void clearElement() {
         int sz = size();
         for (int i = 0; i < sz; i++) {
             removeLast();
@@ -27,6 +33,6 @@ public class Tile extends ArrayList<Integer> {
 
     @Override
     public String toString() {
-        return "O Tile das coordenadas [" + x + ", " + y + "] contem os itens: " + super.toString();
+        return D.d(getClass(), "Este Element [" + x + ", " + y + "] contem os itens: " + super.toString());
     }
 }

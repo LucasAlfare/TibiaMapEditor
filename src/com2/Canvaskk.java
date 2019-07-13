@@ -1,5 +1,7 @@
 package com2;
 
+import misc.C;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;

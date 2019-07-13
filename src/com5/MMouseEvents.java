@@ -1,5 +1,8 @@
-package com4;
+package com5;
 
+import com4.Core;
+import com4.Element;
+import com4.MCanvas;
 import misc.C;
 import misc.D;
 

@@ -1,4 +1,4 @@
-package com4;
+package com5;
 
 import misc.C;
 
@@ -7,12 +7,12 @@ import javax.swing.*;
 public class Main extends JFrame {
 
     public Main() {
-        int s = 20;
-        setSize((s * C.TS) + 1, (s * C.TS) + 1);
+        int size = 10;
+        setSize((size * C.TS) + 1, (size * C.TS) + 1);
         setDefaultCloseOperation(3);
         setLocationRelativeTo(null);
 
-        MCanvas mCanvas = new MCanvas(new Core(s, C.SPR));
+        MCanvas mCanvas = new MCanvas();
         add(mCanvas);
 
         setVisible(true);

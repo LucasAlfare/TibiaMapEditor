@@ -1,4 +1,4 @@
-package com4;
+package com5;
 
 import misc.D;
 
@@ -9,23 +9,26 @@ public class MCanvas extends JComponent {
 
     public Graphics2D graphics2D;
 
-    public Core core;
-    public MKeyEvents mKeyEvents;
-    public MMouseEvents mMouseEvents;
+    public Floor floor;
+    public Layer gl, ol;
 
-    public MCanvas(Core core) {
-        this.core = core;
+    public int mapSize = 50, viewSize = 10;
+
+    public MKeyEvents mKeyEvents;
+//    public MMouseEvents mMouseEvents;
+
+    public MCanvas() {
         this.setFocusable(true);
 
+        gl = new GroundLayer(mapSize);
+        ol = new ObjectLayer(mapSize);
+        floor = new Floor(gl, ol, viewSize);
+
         mKeyEvents = new MKeyEvents(this);
-        mMouseEvents = new MMouseEvents(this);
-
+//        mMouseEvents = new MMouseEvents(this);
+//
         addKeyListener(mKeyEvents);
-        addMouseListener(mMouseEvents);
-    }
-
-    public Core getCore() {
-        return this.core;
+//        addMouseListener(mMouseEvents);
     }
 
     @Override
@@ -34,7 +37,7 @@ public class MCanvas extends JComponent {
         graphics2D = (Graphics2D) g;
 
         long i = System.currentTimeMillis();
-        graphics2D.drawImage(core.mainViewImg, 0, 0, this);
+        graphics2D.drawImage(floor.image, 0, 0, this);
         D.d(getClass(), "Demorou " + (System.currentTimeMillis() - i) + "ms pra desenhar tudo!!");
 
         graphics2D.dispose();

@@ -1,6 +1,6 @@
 package com3;
 
-import com2.C;
+import misc.C;
 import parsers.Spr;
 
 import javax.swing.*;
