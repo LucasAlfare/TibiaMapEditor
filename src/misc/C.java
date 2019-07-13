@@ -11,14 +11,23 @@ import java.io.IOException;
 public class C {
 
     /**
-     * standard TileElement Size
+     * tamanho de um TileElement padrão
      */
     public static final int TS = 32;
 
+    /**
+     * Caminho para o arquivo .spr padrão do projeto
+     */
     public static final String SPR_PATH = "src/assets/tibia-8.6.spr";
 
+    /**
+     * Parser de sprites padrão para ser usado durante todas as operações
+     */
     public static Spr SPR;
 
+    /*
+     * bloco de inicialização estática para atribuir valor ao Parser de sprites padrão
+     */
     static {
         try {
             SPR = new Spr(C.SPR_PATH);
@@ -27,5 +36,6 @@ public class C {
         }
     }
 
+    @Deprecated
     public static final Color COLOR_SELECTED_TILE = new Color(0, 255, 150, 125);
 }
