@@ -1,4 +1,4 @@
-package com5;
+package com;
 
 public class GroundLayer extends Layer {
 
