@@ -53,6 +53,7 @@ public class MMouseEvents extends MouseAdapter implements MouseMotionListener {
         cy = (p.y / C.TS) + mCanvas.floor.currY;
     }
 
+    //vai retornar um elemento do groundLayer ou do objectLayer
     private TileElement getClickedTileElement() {
         if (!mCanvas.floor.objectLayer.tileElements[cx][cy].isEmpty()) {
             return mCanvas.floor.objectLayer.tileElements[cx][cy];
