@@ -5,6 +5,7 @@ import com.parsers.Spr;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferInt;
 import java.util.Random;
 
 import static com.misc.C.SPR;
@@ -51,7 +52,9 @@ public class Floor {
                 .getLocalGraphicsEnvironment()
                 .getDefaultScreenDevice()
                 .getDefaultConfiguration()
-                .createCompatibleImage(viewSize * TS, viewSize * TS, BufferedImage.TYPE_INT_ARGB);
+                .createCompatibleImage(
+                        viewSize * TS, viewSize * TS,
+                        BufferedImage.TYPE_INT_ARGB);
 
         long s = System.currentTimeMillis();
         for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
@@ -77,6 +80,18 @@ public class Floor {
     private void paintContentPixels(int targetContentValue, int tw, int th) {
         for (Spr.Pixel p : SPR.getSpriteInfo(SPR.spriteAddresses.get(targetContentValue))) {
             image.setRGB(p.x + tw, p.y + th, p.color.getRGB());
+        }
+    }
+
+    private static void copyImgToAnotherAt(BufferedImage src, BufferedImage dst, int dx, int dy) {
+        int[] srcBuf = ((DataBufferInt) src.getRaster().getDataBuffer()).getData();
+        int[] dstBuf = ((DataBufferInt) dst.getRaster().getDataBuffer()).getData();
+        int w = src.getWidth();
+        int h = src.getHeight();
+        int dstOffset = dx + dy * dst.getWidth();
+        int srcOffset = 0;
+        for (int y = 0; y < h; y++, dstOffset += dst.getWidth(), srcOffset += w) {
+            System.arraycopy(srcBuf, srcOffset, dstBuf, dstOffset, w);
         }
     }
 }
