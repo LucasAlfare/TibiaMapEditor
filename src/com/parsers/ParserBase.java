@@ -1,4 +1,4 @@
-package parsers;
+package com.parsers;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

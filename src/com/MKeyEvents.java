@@ -1,6 +1,6 @@
 package com;
 
-import misc.D;
+import com.misc.D;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;

@@ -1,6 +1,6 @@
-package misc;
+package com.misc;
 
-import parsers.Spr;
+import com.parsers.Spr;
 
 import java.awt.*;
 import java.io.IOException;

@@ -1,14 +1,14 @@
 package com;
 
-import misc.D;
-import parsers.Spr;
+import com.misc.D;
+import com.parsers.Spr;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-import static misc.C.SPR;
-import static misc.C.TS;
+import static com.misc.C.SPR;
+import static com.misc.C.TS;
 
 public class Floor {
 

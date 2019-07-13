@@ -1,6 +1,6 @@
 package com;
 
-import misc.D;
+import com.misc.D;
 
 import javax.swing.*;
 import java.awt.*;

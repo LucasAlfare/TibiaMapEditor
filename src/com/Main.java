@@ -1,6 +1,6 @@
 package com;
 
-import misc.C;
+import com.misc.C;
 
 import javax.swing.*;
 

@@ -1,7 +1,7 @@
 package com;
 
-import misc.C;
-import misc.D;
+import com.misc.C;
+import com.misc.D;
 
 import java.awt.*;
 import java.awt.event.MouseAdapter;

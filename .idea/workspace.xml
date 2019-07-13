@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa750c00-880d-4383-8c73-75730d5f183b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Floor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/misc/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/C.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,12 +33,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/MMouseEvents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="74">
+              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#355#356#0" expanded="true" />
                 <element signature="e#393#394#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/misc/C.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Floor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="264">
+              <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,24 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/jdk1.8.0_144/src.zip!/java/lang/Math.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="758" column="6" lean-forward="true" selection-start-line="758" selection-start-column="6" selection-end-line="758" selection-end-column="6" />
-              <folding>
-                <element signature="e#32010#32011#0" expanded="true" />
-                <element signature="e#32095#32096#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/MCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="384">
+              <caret line="45" column="73" lean-forward="true" selection-start-line="45" selection-start-column="73" selection-end-line="45" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tt/M2.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/Parser.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/SprParser.java" />
         <option value="$PROJECT_DIR$/src/com/extractor/DatParser.java" />
@@ -168,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/com5/GroundLayer.java" />
         <option value="$PROJECT_DIR$/src/com5/Element.java" />
         <option value="$PROJECT_DIR$/src/com5/Layer.java" />
-        <option value="$PROJECT_DIR$/src/misc/C.java" />
         <option value="$PROJECT_DIR$/src/com5/ObjectLayer.java" />
         <option value="$PROJECT_DIR$/src/com5/TileElement.java" />
         <option value="$PROJECT_DIR$/src/com5/MCanvas.java" />
@@ -177,6 +173,8 @@
         <option value="$PROJECT_DIR$/src/misc/D.java" />
         <option value="$PROJECT_DIR$/src/com5/Floor.java" />
         <option value="$PROJECT_DIR$/src/com/Floor.java" />
+        <option value="$PROJECT_DIR$/src/com/MMouseEvents.java" />
+        <option value="$PROJECT_DIR$/src/misc/C.java" />
       </list>
     </option>
   </component>
@@ -215,6 +213,12 @@
               <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -222,6 +226,12 @@
               <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="misc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="TibiaMapEditor" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Editor de Mapa" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="parsers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -370,28 +380,7 @@
       <workItem from="1562847800716" duration="4352000" />
       <workItem from="1562871261020" duration="6067000" />
       <workItem from="1562964774806" duration="7400000" />
-      <workItem from="1563025497279" duration="8407000" />
-    </task>
-    <task id="LOCAL-00006" summary="Inicial">
-      <created>1558663169868</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1558663169868</updated>
-    </task>
-    <task id="LOCAL-00007" summary="TODO: arrumar a cor, ta dando um errinho...">
-      <created>1558667539438</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1558667539439</updated>
-    </task>
-    <task id="LOCAL-00008" summary="TODO: arrumar a cor, ta dando um errinho...">
-      <created>1558668520209</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1558668520209</updated>
+      <workItem from="1563025497279" duration="8737000" />
     </task>
     <task id="LOCAL-00009" summary="TODO: arrumar a cor, ta dando um errinho...">
       <created>1558669104522</created>
@@ -715,11 +704,32 @@
       <option name="project" value="LOCAL" />
       <updated>1563033698394</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="estrutura geral modificada">
+      <created>1563033923992</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1563033923992</updated>
+    </task>
+    <task id="LOCAL-00056" summary="estrutura geral modificada">
+      <created>1563033936330</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1563033936330</updated>
+    </task>
+    <task id="LOCAL-00057" summary="estrutura geral modificada">
+      <created>1563034046453</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1563034046453</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149205000" />
+    <option name="totallyTimeSpent" value="149535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="738" extended-state="6" />
@@ -1165,27 +1175,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/C.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ObjectLayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/MCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,24 +1215,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/MMouseEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/misc/D.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
           <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1255,20 +1248,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Floor.java">
+    <entry file="file://$PROJECT_DIR$/src/misc/C.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="145">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/MMouseEvents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="74">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Floor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/MCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="45" column="73" lean-forward="true" selection-start-line="45" selection-start-column="73" selection-end-line="45" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

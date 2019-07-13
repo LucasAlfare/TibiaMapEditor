@@ -1,6 +1,6 @@
-package parsers;
+package com.parsers;
 
-import misc.D;
+import com.misc.D;
 
 import java.awt.*;
 import java.io.IOException;
