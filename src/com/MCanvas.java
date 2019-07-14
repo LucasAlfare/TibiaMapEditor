@@ -5,8 +5,6 @@ import com.misc.D;
 import javax.swing.*;
 import java.awt.*;
 
-import static com.misc.ImgPainter.paintFloorImage;
-
 public class MCanvas extends JComponent {
 
     public Graphics2D graphics2D;
@@ -18,18 +16,15 @@ public class MCanvas extends JComponent {
 
     public MCanvas() {
         this.setFocusable(true);
-
         floor = new Floor();
-
         mKeyEvents = new MKeyEvents(this);
         mMouseEvents = new MMouseEvents(this);
-
         addKeyListener(mKeyEvents);
         addMouseListener(mMouseEvents);
     }
 
     public void update() {
-        paintFloorImage(floor.currX, floor.currY, floor);
+        floor.update();
         repaint();
     }
 

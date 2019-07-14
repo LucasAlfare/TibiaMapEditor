@@ -5,6 +5,7 @@ import java.util.Random;
 
 import static com.misc.G.viewSize;
 import static com.misc.ImgPainter.paintFloorImage;
+import static com.misc.ImgPainter.paintFloorImage2;
 
 public class Floor {
 
@@ -23,10 +24,16 @@ public class Floor {
 
     private void init() {
         objectLayer.tileElements[0][0].add(2);
-        objectLayer.tileElements[viewSize - 1][viewSize - 1].add(4);
+        objectLayer.tileElements[viewSize - 1][viewSize - 1].add(8);
+        objectLayer.tileElements[viewSize][viewSize].add(7);
 
-        paintFloorImage(currX, currY, this);
+        update();
         initied = true;
+    }
+
+    public void update() {
+        paintFloorImage(currX, currY, this);
+        paintFloorImage2(currX, currY, this);
     }
 
 //    public void renderFloorImage2(int x, int y) {

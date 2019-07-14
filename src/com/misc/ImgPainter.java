@@ -9,6 +9,7 @@ import java.awt.image.DataBufferInt;
 
 import static com.misc.G.*;
 
+@SuppressWarnings("ALL")
 public class ImgPainter {
 
     /**
@@ -19,69 +20,96 @@ public class ImgPainter {
      * - achar um jeito de guardar um desenho e so iterar pixels se o atual for diferente
      * do anterior! (talvez seja possivel guardando isso em uma subImage!)
      */
-    public static void paintFloorImage(int x, int y, Floor currentFloor) {
-        int xx = x + viewSize < mapSize ? x : mapSize - viewSize;
-        int yy = y + viewSize < mapSize ? y : mapSize - viewSize;
+    public static void paintFloorImage(int x, int y, Floor floor) {
+        if (!floor.initied) {
+            int xx = x + viewSize < mapSize ? x : mapSize - viewSize;
+            int yy = y + viewSize < mapSize ? y : mapSize - viewSize;
 
-        //sempre que for desenhar a imagem e "resetada"
-        currentFloor.image = rawImage(viewSize * TS, viewSize * TS);
+            //sempre que for desenhar a imagem e "resetada"
+            floor.image = rawImage(viewSize * TS, viewSize * TS);
 
-        long s = System.currentTimeMillis();
-        for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
-            for (int j = 0, th = 0; j < viewSize; j++, th += TS) {
-                //pinta o chao aaaaaa
-                for (int currContent : currentFloor.groundLayer.tileElements[i + xx][j + yy]) {
-                    paintContentPixels(currentFloor.image, currContent, tw, th);
-                }
+            long s = System.currentTimeMillis();
+            for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
+                for (int j = 0, th = 0; j < viewSize; j++, th += TS) {
+                    //pinta o chao aaaaaa
+                    for (int currContent : floor.groundLayer.tileElements[i + xx][j + yy]) {
+                        paintContentPixels(floor.image, currContent, tw, th);
+                    }
 
-                if (!currentFloor.objectLayer.tileElements[i + xx][j + yy].isEmpty()) {
-                    //pinta os objetos que estiverem sobre o chao (mesmo lugar)
-                    for (int currContent : currentFloor.objectLayer.tileElements[i + xx][j + yy]) {
-                        if (currContent > 0) {
-                            paintContentPixels(currentFloor.image, currContent, tw, th);
+                    if (!floor.objectLayer.tileElements[i + xx][j + yy].isEmpty()) {
+                        //pinta os objetos que estiverem sobre o chao (mesmo lugar)
+                        for (int currContent : floor.objectLayer.tileElements[i + xx][j + yy]) {
+                            if (currContent > 0) {
+                                paintContentPixels(floor.image, currContent, tw, th);
+                            }
                         }
                     }
                 }
             }
+            D.d(ImgPainter.class, "Imagem do andar de ID [" + 0 + "] foi pintada em " + (System.currentTimeMillis() - s) + "ms!!!!");
         }
-        D.d(ImgPainter.class, "Imagem do andar de ID [" + 0 + "] foi pintada em " + (System.currentTimeMillis() - s) + "ms!!!!");
     }
 
     public static void paintFloorImage2(int x, int y, Floor floor) {
         if (floor.initied) {
+            System.out.println("foi chamado!");
+            long s = System.currentTimeMillis();
             BufferedImage aux = floor.image.getSubimage(
                     floor.targetX * TS,
                     floor.targetY * TS,
                     floor.image.getWidth() - (floor.targetX == 1 ? TS : 0),
                     floor.image.getHeight() - (floor.targetY == 1 ? TS : 0));
 
+            floor.image = rawImage(viewSize * TS, viewSize * TS);
+            System.out.println("targets: " + floor.targetX + ", " + floor.targetY);
             floor.image
                     .getGraphics()
                     .drawImage(
                             aux,
-                            floor.targetX * TS,
-                            floor.targetY * TS,
+                            floor.targetX * (floor.targetX == 0 ? TS : 0),
+                            floor.targetY * (floor.targetY == 0 ? TS : 0),
                             null);
 
+            int xx = x + viewSize < mapSize ? x : mapSize - viewSize;
+            int yy = y + viewSize < mapSize ? y : mapSize - viewSize;
+
             if (floor.targetX == 0 && floor.targetY == 0) {
+                System.out.println("if 1");
                 for (int i = 0, tw = 0; i < 1; i++, tw += TS) {
                     for (int j = 0, th = 0; j < viewSize; j++, th += TS) {
                         //desenhar na posição [i][th]
                     }
                 }
             } else if (floor.targetX == 0 && floor.targetY == 1) {
+                System.out.println("if 2");
                 for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
                     for (int j = 0, th = 0; j < 1; j++, th += TS) {
                         //desenhar na posição [tw][viewSize-1]
                     }
                 }
             } else if (floor.targetX == 1 && floor.targetY == 0) {
+                System.out.println("if 3");
+                //paintContentPixels((viewSize - 1) * TS, 0, floor.image, 1, 0, 0);
                 for (int i = 0, tw = 0; i < 1; i++, tw += TS) {
                     for (int j = 0, th = 0; j < viewSize; j++, th += TS) {
                         //desenhar na posição [viewSize-1][th]
+                        //pinta o chao aaaaaa
+                        for (int currContent : floor.groundLayer.tileElements[i + xx][j + yy]) {
+                            paintContentPixels((viewSize - 1) * TS, j * TS, floor.image, currContent, 0, 0);
+                        }
+
+                        if (!floor.objectLayer.tileElements[i + xx][j + yy].isEmpty()) {
+                            //pinta os objetos que estiverem sobre o chao (mesmo lugar)
+                            for (int currContent : floor.objectLayer.tileElements[i + xx][j + yy]) {
+                                if (currContent > 0) {
+                                    paintContentPixels((viewSize - 1) * TS, j * TS, floor.image, currContent, 0, 0);
+                                }
+                            }
+                        }
                     }
                 }
             } else { //[1, 1]
+                System.out.println("else");
                 for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
                     for (int j = 0, th = 0; j < 1; j++, th += TS) {
                         //desenhar na posição [tw][viewSize-1]
@@ -94,6 +122,7 @@ public class ImgPainter {
                     }
                 }
             }
+            D.d(ImgPainter.class, "Imagem do andar de ID [" + 0 + "] foi pintada2 em " + (System.currentTimeMillis() - s) + "ms!!!!");
         }
     }
 
