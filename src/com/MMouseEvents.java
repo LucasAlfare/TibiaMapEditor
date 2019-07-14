@@ -1,13 +1,14 @@
 package com;
 
 import com.misc.D;
-import com.misc.G;
 
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.util.Random;
+
+import static com.misc.G.TS;
 
 public class MMouseEvents extends MouseAdapter implements MouseMotionListener {
 
@@ -44,14 +45,13 @@ public class MMouseEvents extends MouseAdapter implements MouseMotionListener {
         super.mouseReleased(e);
         updateClickInfo(e);
         D.d(getClass(), "Coordenadas clique (mouseReleased): [" + cx + ", " + cy + "]");
-
         mCanvas.repaint();
     }
 
     private void updateClickInfo(MouseEvent e) {
         p = e.getPoint();
-        cx = (p.x / G.TS) + mCanvas.floor.currX;
-        cy = (p.y / G.TS) + mCanvas.floor.currY;
+        cx = (p.x / TS) + mCanvas.floor.currX;
+        cy = (p.y / TS) + mCanvas.floor.currY;
     }
 
     //vai retornar um elemento do groundLayer ou do objectLayer

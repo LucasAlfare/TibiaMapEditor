@@ -21,7 +21,7 @@ public class ImgPainter {
      * do anterior! (talvez seja possivel guardando isso em uma subImage!)
      */
     public static void paintFloorImage(int x, int y, Floor floor) {
-        if (!floor.initied) {
+        if (true) {
             int xx = x + viewSize < mapSize ? x : mapSize - viewSize;
             int yy = y + viewSize < mapSize ? y : mapSize - viewSize;
 
@@ -46,10 +46,11 @@ public class ImgPainter {
                     }
                 }
             }
-            D.d(ImgPainter.class, "Imagem do andar de ID [" + 0 + "] foi pintada em " + (System.currentTimeMillis() - s) + "ms!!!!");
+            D.d(ImgPainter.class, "Imagem do andar de ID [" + floor.ID + "] foi pintada em " + (System.currentTimeMillis() - s) + "ms!!!!");
         }
     }
 
+    @Deprecated
     public static void paintFloorImage2(int x, int y, Floor floor) {
         if (floor.initied) {
             System.out.println("foi chamado!");
@@ -123,6 +124,9 @@ public class ImgPainter {
                 }
             }
             D.d(ImgPainter.class, "Imagem do andar de ID [" + 0 + "] foi pintada2 em " + (System.currentTimeMillis() - s) + "ms!!!!");
+            floor.targetX = 0;
+            floor.targetY = 0;
+
         }
     }
 

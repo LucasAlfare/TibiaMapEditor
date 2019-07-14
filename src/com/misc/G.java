@@ -38,5 +38,5 @@ public class G {
 
     public static final Color COLOR_SELECTED_TILE = new Color(0, 255, 150, 125);
 
-    public static int mapSize = 100, viewSize = 25;
+    public static int mapSize = 100, viewSize = 10;
 }
