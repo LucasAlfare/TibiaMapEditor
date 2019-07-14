@@ -5,7 +5,7 @@ import com.misc.D;
 import javax.swing.*;
 import java.awt.*;
 
-import static com.misc.ImgPainter.renderFloorImage;
+import static com.misc.ImgPainter.paintFloorImage;
 
 public class MCanvas extends JComponent {
 
@@ -29,7 +29,7 @@ public class MCanvas extends JComponent {
     }
 
     public void update() {
-        renderFloorImage(floor.currX, floor.currY, floor);
+        paintFloorImage(floor.currX, floor.currY, floor);
         repaint();
     }
 
@@ -40,7 +40,7 @@ public class MCanvas extends JComponent {
 
         long i = System.currentTimeMillis();
         graphics2D.drawImage(floor.image, 0, 0, this);
-        D.d(getClass(), "Demorou " + (System.currentTimeMillis() - i) + "ms pra desenhar tudo!!");
+        D.d(getClass(), "Demorou " + (System.currentTimeMillis() - i) + "ms pra exibir a imagem");
 
         graphics2D.dispose();
     }

@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 import static com.misc.G.viewSize;
-import static com.misc.ImgPainter.renderFloorImage;
+import static com.misc.ImgPainter.paintFloorImage;
 
 public class Floor {
 
@@ -12,6 +12,7 @@ public class Floor {
     public Layer groundLayer, objectLayer;
     public BufferedImage image;
     public int currX, currY, targetX, targetY;
+    public boolean initied = false;
 
     public Floor() {
         groundLayer = new GroundLayer();
@@ -24,12 +25,13 @@ public class Floor {
         objectLayer.tileElements[0][0].add(2);
         objectLayer.tileElements[viewSize - 1][viewSize - 1].add(4);
 
-        renderFloorImage(currX, currY, this);
+        paintFloorImage(currX, currY, this);
+        initied = true;
     }
 
 //    public void renderFloorImage2(int x, int y) {
 //        if (image == null) {
-//            renderFloorImage(x, y);
+//            paintFloorImage(x, y);
 //        } else {
 //            int xx = x + viewSize < mapSize ? x : mapSize - viewSize;
 //            int yy = y + viewSize < mapSize ? y : mapSize - viewSize;

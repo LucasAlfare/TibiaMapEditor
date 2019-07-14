@@ -19,7 +19,7 @@ public class ImgPainter {
      * - achar um jeito de guardar um desenho e so iterar pixels se o atual for diferente
      * do anterior! (talvez seja possivel guardando isso em uma subImage!)
      */
-    public static void renderFloorImage(int x, int y, Floor currentFloor) {
+    public static void paintFloorImage(int x, int y, Floor currentFloor) {
         int xx = x + viewSize < mapSize ? x : mapSize - viewSize;
         int yy = y + viewSize < mapSize ? y : mapSize - viewSize;
 
@@ -44,12 +44,66 @@ public class ImgPainter {
                 }
             }
         }
-        D.d(ImgPainter.class, "Imagem do andar de ID [" + 0 + "] foi desenhada em " + (System.currentTimeMillis() - s) + "ms!!!!");
+        D.d(ImgPainter.class, "Imagem do andar de ID [" + 0 + "] foi pintada em " + (System.currentTimeMillis() - s) + "ms!!!!");
+    }
+
+    public static void paintFloorImage2(int x, int y, Floor floor) {
+        if (floor.initied) {
+            BufferedImage aux = floor.image.getSubimage(
+                    floor.targetX * TS,
+                    floor.targetY * TS,
+                    floor.image.getWidth() - (floor.targetX == 1 ? TS : 0),
+                    floor.image.getHeight() - (floor.targetY == 1 ? TS : 0));
+
+            floor.image
+                    .getGraphics()
+                    .drawImage(
+                            aux,
+                            floor.targetX * TS,
+                            floor.targetY * TS,
+                            null);
+
+            if (floor.targetX == 0 && floor.targetY == 0) {
+                for (int i = 0, tw = 0; i < 1; i++, tw += TS) {
+                    for (int j = 0, th = 0; j < viewSize; j++, th += TS) {
+                        //desenhar na posição [i][th]
+                    }
+                }
+            } else if (floor.targetX == 0 && floor.targetY == 1) {
+                for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
+                    for (int j = 0, th = 0; j < 1; j++, th += TS) {
+                        //desenhar na posição [tw][viewSize-1]
+                    }
+                }
+            } else if (floor.targetX == 1 && floor.targetY == 0) {
+                for (int i = 0, tw = 0; i < 1; i++, tw += TS) {
+                    for (int j = 0, th = 0; j < viewSize; j++, th += TS) {
+                        //desenhar na posição [viewSize-1][th]
+                    }
+                }
+            } else { //[1, 1]
+                for (int i = 0, tw = 0; i < viewSize; i++, tw += TS) {
+                    for (int j = 0, th = 0; j < 1; j++, th += TS) {
+                        //desenhar na posição [tw][viewSize-1]
+                    }
+                }
+
+                for (int i = 0, tw = 0; i < 1; i++, tw += TS) {
+                    for (int j = 0, th = 0; j < viewSize - 1; j++, th += TS) {
+                        //desenhar na posição [viewSize-1][th]
+                    }
+                }
+            }
+        }
     }
 
     private static void paintContentPixels(BufferedImage targetImage, int targetContentValue, int tw, int th) {
+        paintContentPixels(0, 0, targetImage, targetContentValue, tw, th);
+    }
+
+    private static void paintContentPixels(int x, int y, BufferedImage targetImage, int targetContentValue, int tw, int th) {
         for (Spr.Pixel p : SPR.getSpriteInfo(SPR.spriteAddresses.get(targetContentValue))) {
-            targetImage.setRGB(p.x + tw, p.y + th, p.color.getRGB());
+            targetImage.setRGB(p.x + x + tw, p.y + y + th, p.color.getRGB());
         }
     }
 
@@ -58,9 +112,7 @@ public class ImgPainter {
                 .getLocalGraphicsEnvironment()
                 .getDefaultScreenDevice()
                 .getDefaultConfiguration()
-                .createCompatibleImage(
-                        w, h,
-                        BufferedImage.TYPE_INT_ARGB);
+                .createCompatibleImage(w, h, BufferedImage.TYPE_INT_ARGB);
     }
 
     public static void copyImgToAnotherAt(BufferedImage src, BufferedImage dst, int dx, int dy) {
