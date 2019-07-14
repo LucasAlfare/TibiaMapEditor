@@ -5,6 +5,8 @@ import com.misc.D;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+import static com.misc.G.mapSize;
+
 public class MKeyEvents extends KeyAdapter {
 
     private MCanvas mCanvas;
@@ -24,7 +26,7 @@ public class MKeyEvents extends KeyAdapter {
             mCanvas.update();
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
             D.d(getClass(), "RIGHT (keyPressed)");
-            mCanvas.floor.currX = mCanvas.floor.currX >= mCanvas.floor.mapSize ? mCanvas.floor.mapSize : ++mCanvas.floor.currX;
+            mCanvas.floor.currX = mCanvas.floor.currX >= mapSize ? mapSize : ++mCanvas.floor.currX;
             mCanvas.floor.targetX = 1;
             mCanvas.update();
         } else if (e.getKeyCode() == KeyEvent.VK_UP) {
@@ -34,7 +36,7 @@ public class MKeyEvents extends KeyAdapter {
             mCanvas.update();
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             D.d(getClass(), "DOWN (keyPressed)");
-            mCanvas.floor.currY = mCanvas.floor.currY >= mCanvas.floor.mapSize ? mCanvas.floor.mapSize : ++mCanvas.floor.currY;
+            mCanvas.floor.currY = mCanvas.floor.currY >= mapSize ? mapSize : ++mCanvas.floor.currY;
             mCanvas.floor.targetY = 1;
             mCanvas.update();
         } else if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {

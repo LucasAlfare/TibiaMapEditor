@@ -6,9 +6,9 @@ import java.awt.*;
 import java.io.IOException;
 
 /*
-"CONSTANTES"
+"GLOBAIS"
  */
-public class C {
+public class G {
 
     /**
      * tamanho de um TileElement padrão
@@ -30,12 +30,13 @@ public class C {
      */
     static {
         try {
-            SPR = new Spr(C.SPR_PATH);
+            SPR = new Spr(G.SPR_PATH);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    @Deprecated
     public static final Color COLOR_SELECTED_TILE = new Color(0, 255, 150, 125);
+
+    public static int mapSize = 100, viewSize = 10;
 }

@@ -1,15 +1,16 @@
 package com;
 
+import com.misc.G;
+
 public class ObjectLayer extends Layer {
 
-    public ObjectLayer(int size) {
-        super(size);
+    public ObjectLayer() {
     }
 
     @Override
     public void setupElements() {
         //mock para testar
-        this.tileElements = new TileElement[size][size];
+        this.tileElements = new TileElement[G.mapSize][G.mapSize];
         for (int i = 0; i < this.tileElements.length; i++) {
             for (int j = 0; j < this.tileElements[i].length; j++) {
                 //TileElement de Ground devem conter apenas 1 item (o chao)

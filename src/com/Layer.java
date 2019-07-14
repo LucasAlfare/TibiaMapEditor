@@ -2,12 +2,9 @@ package com;
 
 public abstract class Layer {
 
-    public int size;
     public TileElement[][] tileElements;
 
-    public Layer(int size) {
-        this.size = size;
-
+    public Layer() {
         setupElements();
     }
 

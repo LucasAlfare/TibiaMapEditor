@@ -1,7 +1,7 @@
 package com;
 
-import com.misc.C;
 import com.misc.D;
+import com.misc.G;
 
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -50,8 +50,8 @@ public class MMouseEvents extends MouseAdapter implements MouseMotionListener {
 
     private void updateClickInfo(MouseEvent e) {
         p = e.getPoint();
-        cx = (p.x / C.TS) + mCanvas.floor.currX;
-        cy = (p.y / C.TS) + mCanvas.floor.currY;
+        cx = (p.x / G.TS) + mCanvas.floor.currX;
+        cy = (p.y / G.TS) + mCanvas.floor.currY;
     }
 
     //vai retornar um elemento do groundLayer ou do objectLayer

@@ -5,14 +5,13 @@ import com.misc.D;
 import javax.swing.*;
 import java.awt.*;
 
+import static com.misc.ImgPainter.renderFloorImage;
+
 public class MCanvas extends JComponent {
 
     public Graphics2D graphics2D;
 
     public Floor floor;
-    public Layer gl, ol;
-
-    public int mapSize = 50, viewSize = 10;
 
     public MKeyEvents mKeyEvents;
     public MMouseEvents mMouseEvents;
@@ -20,9 +19,7 @@ public class MCanvas extends JComponent {
     public MCanvas() {
         this.setFocusable(true);
 
-        gl = new GroundLayer(mapSize);
-        ol = new ObjectLayer(mapSize);
-        floor = new Floor(gl, ol, viewSize);
+        floor = new Floor();
 
         mKeyEvents = new MKeyEvents(this);
         mMouseEvents = new MMouseEvents(this);
@@ -32,7 +29,7 @@ public class MCanvas extends JComponent {
     }
 
     public void update() {
-        floor.renderFloorImage2(floor.currX, floor.currY);
+        renderFloorImage(floor.currX, floor.currY, floor);
         repaint();
     }
 
