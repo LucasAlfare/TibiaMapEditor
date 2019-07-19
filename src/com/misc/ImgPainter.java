@@ -75,7 +75,7 @@ public class ImgPainter {
         for (Spr.Pixel pixel : SPR.getSpriteInfo(SPR.spriteAddresses.get(targetContentValue))) {
             targetImage.setRGB(
                     pixel.x + (coord.x * ts) + tw,
-                    pixel.y + (coord.y * ts) + th,
+                    pixel.y + (coord.y * ts) + th,//
                     pixel.color.getRGB());
         }
     }
